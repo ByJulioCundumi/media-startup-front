@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    // font
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-decoration: none;
+}
+
+img{
+    object-fit: fill;
+    width: 200px;
+    height: 200px;
+}
+
+/* Estilo base del scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Ancho del scrollbar vertical */
+  height: 8px; /* Altura del scrollbar horizontal */
+}
+
+/* Parte del fondo del scrollbar */
+::-webkit-scrollbar-track {
+  background: #f6f6f600; /* Color del fondo */
+  border-radius: 4px;
+}
+
+/* Parte "móvil" del scrollbar (el thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: #555; /* Color del scrollbar */
+  border-radius: 4px;
+  border: 2px solid transparent; /* Espaciado interior */
+  background-clip: content-box;
+}
