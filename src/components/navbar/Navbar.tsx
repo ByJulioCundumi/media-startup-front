@@ -37,7 +37,7 @@ function Navbar() {
 
           <span className="create-post-options__trigger">
             <IoCreateOutline className="create-post-options__icon" />
-            Crear
+            Propose
           </span>
 
           <LanguageSelect/>
