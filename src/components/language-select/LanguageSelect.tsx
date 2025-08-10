@@ -1,12 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './languageselect.scss';
+import { setLanguage } from '../../reducers/languageSlice';
+import { useSelector, useDispatch } from 'react-redux';  // <-- agregar dispatch
+import type { IState } from '../../interfaces/IState';
+import { supportedLanguages } from '../util/supportedLanguages';
+import { TbWorldPin } from 'react-icons/tb';
 
 const LanguageSelect: React.FC = () => {
-  const [selected, setSelected] = useState<string>('en');
+  const { selectedLanguage } = useSelector((state: IState) => state.language);
+  const dispatch = useDispatch();  // <-- usar dispatch
   const [open, setOpen] = useState<boolean>(false);
 
+  useEffect(() => {
+    const browserLang = (navigator.languages && navigator.languages.length
+      ? navigator.languages[0]
+      : navigator.language
+    ).slice(0, 2);
+
+    if (supportedLanguages.includes(browserLang)) {
+      dispatch(setLanguage(browserLang));
+    } else {
+      dispatch(setLanguage('en')); // fallback a inglés
+    }
+  }, [dispatch]);
+
   const handleSelect = (code: string) => {
-    setSelected(code);
+    dispatch(setLanguage(code));  // <-- dispatch para cambiar estado
     setOpen(false);
   };
 
@@ -24,19 +43,19 @@ const LanguageSelect: React.FC = () => {
   return (
     <div className="language-select" onClick={() => setOpen(!open)}>
       <div className="language-select__selected">
-        {getLabel(selected)}
+        <TbWorldPin className='language-select__icon'/> {getLabel(selectedLanguage)}
         <span className={`language-select__arrow ${open ? 'open' : ''}`}>▼</span>
       </div>
       {open && (
         <ul className="language-select__dropdown">
           <li
-            className={`language-select__option ${selected === 'en' ? 'active' : ''}`}
+            className={`language-select__option ${selectedLanguage === 'en' ? 'active' : ''}`}
             onClick={() => handleSelect('en')}
           >
             English
           </li>
           <li
-            className={`language-select__option ${selected === 'es' ? 'active' : ''}`}
+            className={`language-select__option ${selectedLanguage === 'es' ? 'active' : ''}`}
             onClick={() => handleSelect('es')}
           >
             Español

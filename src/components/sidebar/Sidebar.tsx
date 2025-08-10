@@ -2,10 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { FaTh, FaRegHandPeace } from 'react-icons/fa';
-import { MdOutlineWorkOutline } from 'react-icons/md';
+import { FaRegHandPeace } from 'react-icons/fa';
+import { MdMoneyOff, MdOutlineWorkOutline } from 'react-icons/md';
 import { BsInfoSquare } from 'react-icons/bs';
-import { RiApps2AddLine, RiLoginBoxLine, RiSearch2Line } from 'react-icons/ri';
+import { RiLoginBoxLine, RiSearch2Line, RiShoppingCartLine } from 'react-icons/ri';
 import { HiOutlineViewGridAdd } from 'react-icons/hi';
 import { LuMessageCircleQuestion } from 'react-icons/lu';
 import { PiHandSwipeLeftThin } from 'react-icons/pi';
@@ -13,7 +13,6 @@ import { PiHandSwipeLeftThin } from 'react-icons/pi';
 import { setSidebar } from '../../reducers/sidebarSlice';
 import type { IState } from '../../interfaces/IState';
 import './Sidebar.scss';
-import { TiUserAddOutline } from 'react-icons/ti';
 
 const Sidebar: React.FC = () => {
   const { sidebarOption } = useSelector((state: IState) => state.sidebar);
@@ -43,19 +42,31 @@ const Sidebar: React.FC = () => {
             className={sidebarOption === "home" ? "sidebar__menu-item-active" : "sidebar__menu-item"}
           >
             <div className="sidebar__tooltip-container">
-              <span className="sidebar__icon"><FaTh /></span>
+              <span className="sidebar__icon"><RiShoppingCartLine /></span>
               <span className="sidebar__tooltip">Global Challenges</span>
             </div>
           </Link>
 
           {/* Market */}
           <Link
-            to="/market"
-            onClick={() => dispatch(setSidebar("market"))}
-            className={sidebarOption === "market" ? "sidebar__menu-item-active" : "sidebar__menu-item"}
+            to="/jobs"
+            onClick={() => dispatch(setSidebar("jobs"))}
+            className={sidebarOption === "jobs" ? "sidebar__menu-item-active" : "sidebar__menu-item"}
           >
             <div className="sidebar__tooltip-container">
               <span className="sidebar__icon"><MdOutlineWorkOutline /></span>
+              <span className="sidebar__tooltip">Work with us</span>
+            </div>
+          </Link>
+
+          {/* Market */}
+          <Link
+            to="/promoters"
+            onClick={() => dispatch(setSidebar("promoters"))}
+            className={sidebarOption === "promoters" ? "sidebar__menu-item-active" : "sidebar__menu-item"}
+          >
+            <div className="sidebar__tooltip-container">
+              <span className="sidebar__icon"><MdMoneyOff  /></span>
               <span className="sidebar__tooltip">Join Promoters</span>
             </div>
           </Link>
@@ -80,7 +91,7 @@ const Sidebar: React.FC = () => {
           >
             <div className="sidebar__tooltip-container">
               <span className="sidebar__icon"><BsInfoSquare /></span>
-              <span className="sidebar__tooltip">Sobre ChallengeMarket</span>
+              <span className="sidebar__tooltip">About VipChallengers</span>
             </div>
           </Link>
 
@@ -88,7 +99,7 @@ const Sidebar: React.FC = () => {
           <div className={sidebarOption === "my-posts" ? "sidebar__menu-item-active" : "sidebar__menu-item"}>
             <div className="sidebar__tooltip-container">
               <span className="sidebar__icon"><LuMessageCircleQuestion /></span>
-              <span className="sidebar__tooltip">Sesion Requerida</span>
+              <span className="sidebar__tooltip">Login required :)</span>
             </div>
           </div>
 
@@ -96,7 +107,7 @@ const Sidebar: React.FC = () => {
           <div className={sidebarOption === "my-posts" ? "sidebar__menu-item-active" : "sidebar__menu-item"}>
             <div className="sidebar__tooltip-container">
               <span className="sidebar__icon"><HiOutlineViewGridAdd /></span>
-              <span className="sidebar__tooltip">Crear Cuenta</span>
+              <span className="sidebar__tooltip">Create your account</span>
             </div>
           </div>
 
@@ -107,7 +118,7 @@ const Sidebar: React.FC = () => {
       <div className="sidebar__bottom" onClick={handleLogout}>
         <div className="sidebar__tooltip-container logout" role="button" tabIndex={0}>
           <span className="sidebar__icon"><PiHandSwipeLeftThin /></span>
-          <span className="sidebar__tooltip">Sesion requerida :)</span>
+          <span className="sidebar__tooltip">Login required :)</span>
         </div>
       </div>
     </div>

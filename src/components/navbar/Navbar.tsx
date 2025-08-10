@@ -1,4 +1,3 @@
-import { SiMarketo } from 'react-icons/si'
 import './navbar.scss'
 import SearchBar from '../search-bar/SearchBar'
 import { BsInfoCircle } from 'react-icons/bs'
@@ -9,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import type { IState } from '../../interfaces/IState'
 import { setSidebar } from '../../reducers/sidebarSlice'
 import { IoCreateOutline } from 'react-icons/io5'
+import { MdOutlineReceiptLong } from 'react-icons/md'
 
 function Navbar() {
   const navigate = useNavigate()
@@ -22,10 +22,10 @@ function Navbar() {
     
   return (
     <div className="navbar">
-        <p className="navbar__sidebar-user">DC</p>
+        <p className="navbar__sidebar-user">VC</p>
         <div className="navbar__brand">
-            <SiMarketo className="navbar__brand--icon"/>
-            <h1 className="navbar__brand--title"><span className="navbar__brand--title-blue">Daily</span>Challenge</h1>
+            <MdOutlineReceiptLong className="navbar__brand--icon"/>
+            <h1 className="navbar__brand--title"><span className="navbar__brand--title-blue">Vip</span>Challengers</h1>
         </div>
         
         <div className="navbar__right">
@@ -37,7 +37,7 @@ function Navbar() {
 
           <span className="create-post-options__trigger">
             <IoCreateOutline className="create-post-options__icon" />
-            Propose
+            Create
           </span>
 
           <LanguageSelect/>

@@ -1,0 +1,259 @@
+.challenge-post {
+  min-width: 400px;
+  max-width: 450px;
+  min-height: 240px;
+  max-height: fit-content;
+  //max-height: 270px;
+  border-radius: 10px;
+  padding: 1.2rem 1.2rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+
+  background: linear-gradient(145deg, #ffffff, #ffffff);
+  border: 1px solid rgba(0, 0, 0, 0.09);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.075);
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+  }
+
+  &__header-actions {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  &__header-btn {
+    background-color: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: #1e293b;
+    border-radius: 8px;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+
+    &:hover {
+      background-color: #e2e8f0;
+    }
+  }
+
+  &__options-icon {
+    font-size: 1.1rem;
+    color: #64748b;
+  }
+
+  &__avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 15px;
+    object-fit: cover;
+    border: 1px solid #0000001e;
+  }
+
+  &__user-header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+
+  &__user-info {
+    line-height: 1.3;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__username {
+    font-weight: 600;
+    background-color: #0ea5e9;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    margin-top: -0.5rem;
+
+    & span {
+      margin-left: 0.3rem;
+      color: #ffffff;
+    }
+  }
+
+  &__handle {
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    color: #8b8c8e;
+    margin-bottom: -0.2rem;
+    font-weight: 400;
+  }
+
+  &__description {
+    font-weight: 400;
+    font-size: 0.98rem;
+    color: #334155c8;
+    line-height: 1.5;
+    cursor: pointer;
+    min-height: 90px;
+    margin-bottom: -0.1rem;
+  }
+
+  &__stats {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &__stat {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    padding: 0.3rem 0.5rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    color: #334155;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e2e8f0;
+    }
+  }
+
+  &__stat-icon {
+    color: #0ea5e9;
+    font-size: 1rem;
+  }
+
+  &__my-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: #0f172a;
+  }
+
+  &__participants {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &--text {
+      font-size: 0.85rem;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__footer-left {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  &__sponsor-badge {
+    cursor: pointer;
+    display: flex;
+    gap: 0.3rem;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    border: 1px solid #0ea5e9;
+    border-radius: 8px;
+    background-color: #38bdf8;
+    padding: 0.4rem 0.8rem;
+    font-weight: 500;
+    color: white;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #0284c7;
+    }
+  }
+
+  &__pricing {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  &__pricing-label {
+    font-size: 0.85rem;
+    color: #475569;
+  }
+
+  &__pricing-amount {
+    background-color: #f0fdfa;
+    color: #0f766e;
+    border: 1px solid #2dd4bf;
+    font-weight: 600;
+    padding: 0.35rem 0.6rem;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    box-shadow: inset 0 0 2px rgba(45, 212, 191, 0.2);
+
+    & span {
+      font-size: 0.65rem;
+      margin-left: 0.3rem;
+      color: #64748b;
+    }
+  }
+
+  &__gender-icon {
+    font-size: 1rem;
+    background-color: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    color: #0ea5e9;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__tag-small {
+    margin-right: 0.3rem;
+    font-size: 0.75rem;
+    background-color: #e2e8f0;
+    padding: 0.2rem 0.5rem;
+    border-radius: 10px;
+    font-weight: 400;
+    color: #334155;
+    cursor: pointer;
+  }
+}
+
+.challenge-post__see-more {
+  color: #0095ff;
+  font-weight: 300;
+  cursor: pointer;
+  margin-left: 4px;
+  transition: color 0.1s ease;
+}
+
+.challenge-post__see-more:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}

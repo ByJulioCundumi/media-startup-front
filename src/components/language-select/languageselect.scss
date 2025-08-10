@@ -16,6 +16,11 @@
       align-items: center;
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
+
+    &__icon{
+      font-size: 1.4rem;
+      color: rgb(0, 45, 79);
+    }
   
     &__arrow {
       font-size: 0.8rem;

@@ -2,8 +2,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.scss'
 import Navbar from './components/navbar/Navbar'
 import Sidebar from './components/sidebar/Sidebar'
-import HomePage from './pages/home-page/HomePage'
-import GlobalChallenges from './pages/home-page/global-challenges/GlobalChallenges'
+import GlobalChallenges from './pages/challenges-pages/global-challenges/GlobalChallenges'
+import ChallengesPage from './pages/challenges-pages/ChallengesPage'
 
 function App() {
 
@@ -18,7 +18,7 @@ function App() {
         {/* Rutas */}
         <Routes>
 
-          <Route path="/" element={<HomePage />}>
+          <Route path="/" element={<ChallengesPage />}>
             <Route path="" element={<GlobalChallenges />}>
             
             </Route>
