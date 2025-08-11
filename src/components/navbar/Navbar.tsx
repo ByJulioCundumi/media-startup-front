@@ -9,6 +9,7 @@ import type { IState } from '../../interfaces/IState'
 import { setSidebar } from '../../reducers/sidebarSlice'
 import { IoCreateOutline } from 'react-icons/io5'
 import { MdOutlineReceiptLong } from 'react-icons/md'
+import { SiYoutubekids } from 'react-icons/si'
 
 function Navbar() {
   const navigate = useNavigate()
@@ -22,10 +23,10 @@ function Navbar() {
     
   return (
     <div className="navbar">
-        <p className="navbar__sidebar-user">VC</p>
+        <p className="navbar__sidebar-user">CC</p>
         <div className="navbar__brand">
-            <MdOutlineReceiptLong className="navbar__brand--icon"/>
-            <h1 className="navbar__brand--title"><span className="navbar__brand--title-blue">Content</span>Creators</h1>
+            <SiYoutubekids className="navbar__brand--icon"/>
+            <h1 className="navbar__brand--title"><span className="navbar__brand--title-blue">Challenge</span>Clips</h1>
         </div>
         
         <div className="navbar__right">

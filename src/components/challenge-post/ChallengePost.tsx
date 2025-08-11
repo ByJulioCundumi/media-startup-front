@@ -45,12 +45,12 @@ export default function ChallengePost({
       <div className="challenge-post__user-header">
         <div className="challenge-post__user-info">
           <p className="challenge-post__username">
-            {"Male"}
+            Nuevo
             <span>
               | <FaStar />
             </span>
           </p>
-          <p className="challenge-post__handle">@vip</p>
+          <p className="challenge-post__handle">@Male</p>
         </div>
       </div>
 

@@ -1,3 +1,3 @@
 export interface IGenderFilter {
-  selected: "Male" | "Female" | "Both";
+  selected: "Male" | "Female" | "All";
 }

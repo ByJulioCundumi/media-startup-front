@@ -10,11 +10,11 @@ const GenderFilter: React.FC = () => {
 
   return (
     <div className="gender-filter">
-      {["Male", "Female", "Both"].map((value) => (
+      {["Male", "Female", "All"].map((value) => (
         <div
           key={value}
           className={`gender-filter__option ${selected === value ? "active" : ""}`}
-          onClick={() => dispatch(setGenderFilter(value as "Male" | "Female" | "Both"))}
+          onClick={() => dispatch(setGenderFilter(value as "Male" | "Female" | "All"))}
         >
           {value}
         </div>

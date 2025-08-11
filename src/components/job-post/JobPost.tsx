@@ -48,7 +48,7 @@ export default function JobPost({
               | <FaStar />
             </span>
           </p>
-          <p className="job-post__handle">@vip</p>
+          <p className="job-post__handle">@Male</p>
         </div>
       </div>
 
@@ -100,7 +100,7 @@ export default function JobPost({
       <div className="job-post__footer">
         <div className="job-post__pricing">
           <p className="job-post__participants--text">
-            <RiTimerLine /> Seeking Content Creator
+            <RiTimerLine /> Seeking Content Creators
           </p>
         </div>
         <div className="job-post__footer-left">
