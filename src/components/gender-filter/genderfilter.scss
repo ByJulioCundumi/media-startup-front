@@ -1,0 +1,28 @@
+.gender-filter {
+  display: flex;
+  gap: 10px;
+
+  &__option {
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 14px;
+    font-weight: 500;
+    color: #555;
+    background: #fff;
+
+    &:hover {
+      border-color: #007bff;
+      color: #007bff;
+    }
+
+    &.active {
+      background: #20aaff;
+      color: #fff;
+      border-color: #20aaff;
+      font-weight: 600;
+    }
+  }
+}

@@ -1,5 +1,10 @@
-import React, { useRef, useState } from 'react';
+// src/components/CategorySelector.tsx
+import React, { useRef } from 'react';
 import './categoryselector.scss';
+import { FaTrash } from 'react-icons/fa6';
+import { useDispatch, useSelector } from 'react-redux';
+import type { IState } from '../../interfaces/IState';
+import { clearCategories, toggleCategories } from '../../reducers/categoriesSlice';
 
 const defaultCategories = [
   'Retos extremos',
@@ -15,16 +20,11 @@ const defaultCategories = [
 ];
 
 export const CategorySelector: React.FC = () => {
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const dispatch = useDispatch();
+  const selectedCategories = useSelector(
+    (state: IState) => state.categories.selectedCategories
+  );
   const scrollRef = useRef<HTMLDivElement>(null);
-
-  const toggleCategory = (category: string) => {
-    setSelectedCategories(prev =>
-      prev.includes(category)
-        ? prev.filter(c => c !== category)
-        : [...prev, category]
-    );
-  };
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollRef.current) {
@@ -37,23 +37,45 @@ export const CategorySelector: React.FC = () => {
   };
 
   return (
-    <div className="category-selector-wrapper"><span className='category-info'>Popular Topics</span>
+    <div className="category-selector-wrapper">
+      <span className='category-info'>Topics</span>
+
       <button className="arrow-button left" onClick={() => scroll('left')}>‹</button>
 
       <div className="category-selector" ref={scrollRef}>
         {defaultCategories.map((category) => (
-        <button
+          <button
             key={category}
             className={`category-button ${selectedCategories.includes(category) ? 'active' : ''}`}
-            onClick={() => toggleCategory(category)}
+            onClick={() => dispatch(toggleCategories(category))}
             aria-pressed={selectedCategories.includes(category)}
-        >
-            #{category} {/* Quité espacio entre # y texto */}
-        </button>
+          >
+            #{category}
+          </button>
         ))}
       </div>
 
       <button className="arrow-button right" onClick={() => scroll('right')}>›</button>
+
+      <button
+        className="clear-selection-button"
+        onClick={() => dispatch(clearCategories())}
+        disabled={selectedCategories.length === 0}
+        style={{
+          marginLeft: '0.8rem',
+          padding: '0.4rem 0.8rem',
+          borderRadius: '12px',
+          border: '1px solid #cccccc3a',
+          backgroundColor: selectedCategories.length === 0 ? '#eee' : '#474545ff',
+          color: selectedCategories.length === 0 ? '#999' : 'white',
+          cursor: selectedCategories.length === 0 ? 'not-allowed' : 'pointer',
+          userSelect: 'none',
+          fontWeight: '600',
+          transition: 'background-color 0.3s ease',
+        }}
+      >
+        <FaTrash />
+      </button>
     </div>
   );
 };

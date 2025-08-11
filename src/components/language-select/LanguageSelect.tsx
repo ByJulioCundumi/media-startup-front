@@ -4,7 +4,7 @@ import { setLanguage } from '../../reducers/languageSlice';
 import { useSelector, useDispatch } from 'react-redux';  // <-- agregar dispatch
 import type { IState } from '../../interfaces/IState';
 import { supportedLanguages } from '../util/supportedLanguages';
-import { TbWorldPin } from 'react-icons/tb';
+import { TbLanguage, TbWorldPin } from 'react-icons/tb';
 
 const LanguageSelect: React.FC = () => {
   const { selectedLanguage } = useSelector((state: IState) => state.language);
@@ -52,13 +52,13 @@ const LanguageSelect: React.FC = () => {
             className={`language-select__option ${selectedLanguage === 'en' ? 'active' : ''}`}
             onClick={() => handleSelect('en')}
           >
-            English
+           <TbLanguage/> English
           </li>
           <li
             className={`language-select__option ${selectedLanguage === 'es' ? 'active' : ''}`}
             onClick={() => handleSelect('es')}
           >
-            Español
+           <TbLanguage/> Español
           </li>
         </ul>
       )}

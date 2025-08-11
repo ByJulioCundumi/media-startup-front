@@ -1,51 +1,43 @@
-/* ------------------------------------------------------------------
-   File: src/components/challenge-post/ChallengePost.tsx
------------------------------------------------------------------- */
 import "./challengepost.scss";
-import {
-  FaMale,
-  FaRegComment,
-  FaHandPeace,
-  FaStar,
-} from "react-icons/fa";
+import { FaMale, FaRegComment, FaHandPeace, FaStar } from "react-icons/fa";
 import { GoHeart, GoHeartFill } from "react-icons/go";
 import { RiTimerLine } from "react-icons/ri";
 import { CiMenuKebab } from "react-icons/ci";
 import { useState } from "react";
 import { TbClock } from "react-icons/tb";
 import type { ChallengeProps } from "../util/challengesMock";
+import { MdOutlineRemoveRedEye } from "react-icons/md";
+import { FiEye } from "react-icons/fi";
 
-export default function ChallengePost( {description, user, commentsCount, price, likedByMe, likesCount}: ChallengeProps) {
+export default function ChallengePost({
+  description,
+  user,
+  commentsCount,
+  price,
+  likedByMe,
+  likesCount,
+}: ChallengeProps) {
   const [expanded, setExpanded] = useState(false);
-
   const [liked, setLiked] = useState(likedByMe ?? false);
-  const [likesCountState, setLikesCountState] = useState(likesCount);
 
-  const handleToggleLike = async () => {
-
-  };
-
-  const openPost = () => {
-
-  };
+  const handleToggleLike = async () => {};
+  const openPost = () => {};
 
   const isLong = description.length > 75;
-  const visibleText = expanded
-    ? description
-    : description.slice(0, 75);
+  const visibleText = expanded ? description : description.slice(0, 75);
   const toggleText = expanded ? "ver menos" : "ver más";
 
   return (
     <div className="challenge-post">
-      {/* ------- Header actions ------- */}
+      {/* Header */}
       <div className="challenge-post__header-actions">
         <p className="challenge-post__gender-icon">
           <FaMale />
         </p>
         <button className="challenge-post__header-btn">
-          <TbClock /> 
+          <TbClock />
         </button>
-        <button className="challenge-post__header-btn">Challenge</button>
+        <button className="challenge-post__header-btn"> <span className="challenge-post__views">214</span> <FiEye /> </button>
         <CiMenuKebab className="challenge-post__options-icon" />
       </div>
 
@@ -62,7 +54,7 @@ export default function ChallengePost( {description, user, commentsCount, price,
         </div>
       </div>
 
-      {/* Description (click abre) */}
+      {/* Description */}
       <p className="challenge-post__description" onClick={openPost}>
         {visibleText}
         {isLong && (
@@ -82,11 +74,11 @@ export default function ChallengePost( {description, user, commentsCount, price,
       <div className="challenge-post__participants">
         <div className="challenge-post__stats">
           <p
-            className="challenge-post__stat challenge-post__like-icon"
+            className="challenge-post__stat"
             onClick={handleToggleLike}
           >
             {liked ? (
-              <GoHeartFill className="challenge-post__stat-icon liked" />
+              <GoHeartFill className="challenge-post__stat-icon" />
             ) : (
               <GoHeart className="challenge-post__stat-icon" />
             )}
@@ -101,7 +93,7 @@ export default function ChallengePost( {description, user, commentsCount, price,
         <div className="challenge-post__my-price">
           <p className="challenge-post__pricing-label">Req. Budget</p>
           <p className="challenge-post__pricing-amount">
-            $ {price.toFixed(2)} <span>({"USD"})</span>
+            $ {price.toFixed(2)} <span>(USD)</span>
           </p>
         </div>
       </div>
@@ -115,7 +107,7 @@ export default function ChallengePost( {description, user, commentsCount, price,
         </div>
         <div className="challenge-post__footer-left">
           <p className="challenge-post__sponsor-badge">
-            $ Make it happen <FaHandPeace />
+            $ Sponsor Challenge 
           </p>
         </div>
       </div>

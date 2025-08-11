@@ -4,6 +4,8 @@ import Navbar from './components/navbar/Navbar'
 import Sidebar from './components/sidebar/Sidebar'
 import GlobalChallenges from './pages/challenges-pages/global-challenges/GlobalChallenges'
 import ChallengesPage from './pages/challenges-pages/ChallengesPage'
+import JobsPage from './pages/jobs-page/JobsPage'
+import GlobalJobs from './pages/jobs-page/global-jobs/GlobalJobs'
 
 function App() {
 
@@ -20,6 +22,12 @@ function App() {
 
           <Route path="/" element={<ChallengesPage />}>
             <Route path="" element={<GlobalChallenges />}>
+            
+            </Route>
+          </Route>
+
+          <Route path="/jobs" element={<JobsPage />}>
+            <Route path="" element={<GlobalJobs />}>
             
             </Route>
           </Route>

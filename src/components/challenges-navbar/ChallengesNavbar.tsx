@@ -6,6 +6,7 @@ import ChallengesFilter from '../challenges-filter/ChallengesFilter';
 import { CategorySelector } from '../category-selector/CategorySelector';
 import type { IState } from '../../interfaces/IState';
 import { setChallengesNavbar } from '../../reducers/navbarSlice';
+import GenderFilter from '../gender-filter/GenderFilter';
 
 const ChallengesNavbar: React.FC = () => {
   const dispatch = useDispatch();
@@ -13,6 +14,7 @@ const ChallengesNavbar: React.FC = () => {
 
   return (
     <nav className="challenges-navbar" role="navigation" aria-label="Challenges navigation">
+        <GenderFilter />
         <CategorySelector />
         <ChallengesFilter />
     </nav>

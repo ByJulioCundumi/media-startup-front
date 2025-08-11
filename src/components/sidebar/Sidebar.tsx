@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { FaRegHandPeace } from 'react-icons/fa';
-import { MdMoneyOff, MdOutlineWorkOutline } from 'react-icons/md';
+import { MdMoneyOff, MdOutlineWorkOutline, MdWorkHistory } from 'react-icons/md';
 import { BsInfoSquare } from 'react-icons/bs';
 import { RiLoginBoxLine, RiSearch2Line, RiShoppingCartLine } from 'react-icons/ri';
 import { HiOutlineViewGridAdd } from 'react-icons/hi';
@@ -13,6 +13,7 @@ import { PiHandSwipeLeftThin } from 'react-icons/pi';
 import { setSidebar } from '../../reducers/sidebarSlice';
 import type { IState } from '../../interfaces/IState';
 import './Sidebar.scss';
+import { FaCartShopping } from 'react-icons/fa6';
 
 const Sidebar: React.FC = () => {
   const { sidebarOption } = useSelector((state: IState) => state.sidebar);
@@ -42,7 +43,7 @@ const Sidebar: React.FC = () => {
             className={sidebarOption === "home" ? "sidebar__menu-item-active" : "sidebar__menu-item"}
           >
             <div className="sidebar__tooltip-container">
-              <span className="sidebar__icon"><RiShoppingCartLine /></span>
+              <span className="sidebar__icon"><FaCartShopping /></span>
               <span className="sidebar__tooltip">Global Challenges</span>
             </div>
           </Link>
@@ -54,7 +55,7 @@ const Sidebar: React.FC = () => {
             className={sidebarOption === "jobs" ? "sidebar__menu-item-active" : "sidebar__menu-item"}
           >
             <div className="sidebar__tooltip-container">
-              <span className="sidebar__icon"><MdOutlineWorkOutline /></span>
+              <span className="sidebar__icon"><MdWorkHistory /></span>
               <span className="sidebar__tooltip">Work with us</span>
             </div>
           </Link>

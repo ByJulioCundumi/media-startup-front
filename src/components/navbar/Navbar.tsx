@@ -25,21 +25,17 @@ function Navbar() {
         <p className="navbar__sidebar-user">VC</p>
         <div className="navbar__brand">
             <MdOutlineReceiptLong className="navbar__brand--icon"/>
-            <h1 className="navbar__brand--title"><span className="navbar__brand--title-blue">Vip</span>Challengers</h1>
+            <h1 className="navbar__brand--title"><span className="navbar__brand--title-blue">Content</span>Creators</h1>
         </div>
         
         <div className="navbar__right">
           <SearchBar textHolder="Search"/>
-
           <BsInfoCircle className={sidebarOption !== "about" ? "navbar__info-icon" : "navbar__info-icon-active"} onClick={aboutPage} />
-
           <NotificationDropdown/>
-
           <span className="create-post-options__trigger">
             <IoCreateOutline className="create-post-options__icon" />
             Create
           </span>
-
           <LanguageSelect/>
         </div>
     </div>

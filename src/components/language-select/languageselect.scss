@@ -17,6 +17,12 @@
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
+    &__option{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
     &__icon{
       font-size: 1.4rem;
       color: rgb(0, 45, 79);
