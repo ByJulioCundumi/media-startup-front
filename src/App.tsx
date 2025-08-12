@@ -6,6 +6,8 @@ import GlobalChallenges from './pages/challenges-pages/global-challenges/GlobalC
 import ChallengesPage from './pages/challenges-pages/ChallengesPage'
 import JobsPage from './pages/jobs-page/JobsPage'
 import GlobalJobs from './pages/jobs-page/global-jobs/GlobalJobs'
+import PromotersPage from './pages/promoters-page/PromotersPage'
+import GlobalPromoterPosts from './pages/promoters-page/global-promoter-posts/GlobalPromoterPosts'
 
 function App() {
 
@@ -28,6 +30,12 @@ function App() {
 
           <Route path="/jobs" element={<JobsPage />}>
             <Route path="" element={<GlobalJobs />}>
+            
+            </Route>
+          </Route>
+
+          <Route path="/promoters" element={<PromotersPage />}>
+            <Route path="" element={<GlobalPromoterPosts />}>
             
             </Route>
           </Route>

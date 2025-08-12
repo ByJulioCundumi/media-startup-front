@@ -39,8 +39,8 @@ const Sidebar: React.FC = () => {
           {/* Home */}
           <Link
             to="/"
-            onClick={() => dispatch(setSidebar("home"))}
-            className={sidebarOption === "home" ? "sidebar__menu-item-active" : "sidebar__menu-item"}
+            onClick={() => dispatch(setSidebar("challenges"))}
+            className={sidebarOption === "challenges" ? "sidebar__menu-item-active" : "sidebar__menu-item"}
           >
             <div className="sidebar__tooltip-container">
               <span className="sidebar__icon"><FaCartShopping /></span>
@@ -55,8 +55,8 @@ const Sidebar: React.FC = () => {
             className={sidebarOption === "jobs" ? "sidebar__menu-item-active" : "sidebar__menu-item"}
           >
             <div className="sidebar__tooltip-container">
-              <span className="sidebar__icon"><MdWorkHistory /></span>
-              <span className="sidebar__tooltip">Work with us</span>
+              <span className="sidebar__icon"><MdWorkHistory className='jobs-pulse'/></span>
+              <span className="sidebar__tooltip">Jobs | Work with us</span>
             </div>
           </Link>
 
@@ -95,14 +95,6 @@ const Sidebar: React.FC = () => {
               <span className="sidebar__tooltip">About VipChallengers</span>
             </div>
           </Link>
-
-          {/* Sesión requerida */}
-          <div className={sidebarOption === "my-posts" ? "sidebar__menu-item-active" : "sidebar__menu-item"}>
-            <div className="sidebar__tooltip-container">
-              <span className="sidebar__icon"><LuMessageCircleQuestion /></span>
-              <span className="sidebar__tooltip">Login required :)</span>
-            </div>
-          </div>
 
           {/* Crear cuenta */}
           <div className={sidebarOption === "my-posts" ? "sidebar__menu-item-active" : "sidebar__menu-item"}>

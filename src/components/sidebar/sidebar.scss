@@ -140,3 +140,13 @@
     }
   }
 }
+
+.jobs-pulse {
+  animation: jobs-pulse 5s ease-in-out infinite;
+}
+
+@keyframes jobs-pulse {
+  0%   { color: rgba(0, 0, 0, 0.7); }
+  50%  { color: rgb(0, 153, 255); }
+  100% { color: rgba(0, 0, 0, 0.7); }
+}

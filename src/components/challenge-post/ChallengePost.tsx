@@ -8,6 +8,8 @@ import { TbClock } from "react-icons/tb";
 import type { ChallengeProps } from "../util/challengesMock";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { FiEye } from "react-icons/fi";
+import { FaCheck } from "react-icons/fa6";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 export default function ChallengePost({
   description,
@@ -37,7 +39,7 @@ export default function ChallengePost({
         <button className="challenge-post__header-btn">
           <TbClock />
         </button>
-        <button className="challenge-post__header-btn"> <span className="challenge-post__views">214</span> <FiEye /> </button>
+        <button className="challenge-post__header-btn"> <span className="challenge-post__views">(214)</span> <FiEye /> </button>
         <CiMenuKebab className="challenge-post__options-icon" />
       </div>
 
@@ -47,7 +49,7 @@ export default function ChallengePost({
           <p className="challenge-post__username">
             Nuevo
             <span>
-              | <FaStar />
+              <IoMdCheckmarkCircleOutline />
             </span>
           </p>
           <p className="challenge-post__handle">@Male</p>
@@ -102,12 +104,12 @@ export default function ChallengePost({
       <div className="challenge-post__footer">
         <div className="challenge-post__pricing">
           <p className="challenge-post__participants--text">
-            <RiTimerLine /> Awaiting Sponsor
+            <RiTimerLine /> Waiting For Sponsor
           </p>
         </div>
         <div className="challenge-post__footer-left">
           <p className="challenge-post__sponsor-badge">
-            $ Sponsor Challenge 
+            $ Fund Challenge
           </p>
         </div>
       </div>

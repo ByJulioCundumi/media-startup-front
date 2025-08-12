@@ -9,7 +9,11 @@ import type { IState } from '../../interfaces/IState'
 import { setSidebar } from '../../reducers/sidebarSlice'
 import { IoCreateOutline } from 'react-icons/io5'
 import { MdOutlineReceiptLong } from 'react-icons/md'
-import { SiYoutubekids } from 'react-icons/si'
+import { SiYoutubekids, SiYoutubeshorts } from 'react-icons/si'
+import { FaCrown } from 'react-icons/fa6'
+import { GiCrenelCrown, GiJewelCrown, GiLaurelCrown, GiQueenCrown } from 'react-icons/gi'
+import { PiCrownFill, PiCrownSimpleFill } from 'react-icons/pi'
+import { CgCrowdfire } from 'react-icons/cg'
 
 function Navbar() {
   const navigate = useNavigate()
@@ -23,10 +27,10 @@ function Navbar() {
     
   return (
     <div className="navbar">
-        <p className="navbar__sidebar-user">CC</p>
+        <p className="navbar__sidebar-user">Go</p>
         <div className="navbar__brand">
-            <SiYoutubekids className="navbar__brand--icon"/>
-            <h1 className="navbar__brand--title"><span className="navbar__brand--title-blue">Challenge</span>Clips</h1>
+            <SiYoutubeshorts className="navbar__brand--icon"/>
+            <h1 className="navbar__brand--title"><span className="navbar__brand--title-blue">Challenge</span>Kingdom</h1>
         </div>
         
         <div className="navbar__right">

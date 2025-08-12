@@ -1,11 +1,12 @@
 import { Outlet } from "react-router-dom"
-import "./jobspage.scss"
 import ChallengesNavbar from "../../components/challenges-navbar/ChallengesNavbar"
+import "./promoterspage.scss"
 import Cta from "../../components/cta/Cta"
 
-function JobsPage() {
+function PromotersPage() {
+
   return (
-    <section className="jobs-page">
+    <section className="promoters-page">
         <Cta/>
         <ChallengesNavbar/>
         <Outlet/>
@@ -13,4 +14,4 @@ function JobsPage() {
   )
 }
 
-export default JobsPage
+export default PromotersPage
