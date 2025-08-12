@@ -44,7 +44,7 @@ export default function PromoterPost({
       <div className="promoter-post__user-header">
         <div className="promoter-post__user-info">
           <p className="promoter-post__username">
-            Promoters
+            For Promoters
             <span>
               | <FaStar />
             </span>
@@ -101,7 +101,7 @@ export default function PromoterPost({
       <div className="promoter-post__footer">
         <div className="promoter-post__pricing">
           <p className="promoter-post__participants--text">
-            <RiTimerLine /> Waiting For Sponsor
+            <RiTimerLine /> Find A Sponsor
           </p>
         </div>
         <div className="promoter-post__footer-left">

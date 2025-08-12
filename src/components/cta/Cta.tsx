@@ -8,6 +8,9 @@ import { RiLoginBoxLine } from "react-icons/ri"
 import { GiLaurelCrown } from "react-icons/gi"
 import { useSelector } from "react-redux"
 import type { IState } from "../../interfaces/IState"
+import personaVid from "../../assets/vid/vid-7.mp4"
+import cashVid from "../../assets/vid/vid-2.mp4"
+import editVid from "../../assets/vid/vid-10.mp4"
 
 function Cta() {
   const {sidebarOption} = useSelector((state:IState)=>state.sidebar)
@@ -23,9 +26,11 @@ function Cta() {
   return (
     <section className="cta">
       <div className="cta__header">
-        <div className="cta__video-section">
+
+        {
+          sidebarOption === "challenges" && <div className="cta__video-section">
           <div className="cta__video-wrapper">
-            <img className="cta__bg-img" src={bgImg} alt="" />
+            <video className="cta__bg-vid" src={editVid} autoPlay loop/>
           </div>
           <div className="cta__overlay">
             {
@@ -34,7 +39,29 @@ function Cta() {
                 <p className="cta__text--headline">Publica el Próximo  <br />Gran Desafio</p>
                 <p className="cta__text--description">Plantea el Concepto y lo haremos realidad. Tus ideas más locas, transformadas en videos reales 😮</p>
                 <div className="cta__actions">
-                  <p className="cta__btn--primary"> <FaBolt/> Solicitar un desafio</p>
+                  <p className="cta__btn--primary"> <FaBolt/> Solicita un desafio</p>
+                  <p className="cta__btn--secondary"><MdOutlineWorkHistory />Unete a los Promotores</p>
+                </div>
+                <div className="cta__text--dynamic"><TypingText texts={motivationalPhrases} /></div>
+              </div>
+            }
+          </div>
+        </div>
+        }
+
+        {
+          sidebarOption === "jobs" && <div className="cta__video-section">
+          <div className="cta__video-wrapper">
+            <video className="cta__bg-vid" src={cashVid} autoPlay loop/>
+          </div>
+          <div className="cta__overlay">
+            {
+              true && <div className="cta__text-group">
+                <p className="cta__text--small">©2025 | <span>Terms & Conditions</span></p>
+                <p className="cta__text--headline">Completa Trabajos  <br /> Patrocinados</p>
+                <p className="cta__text--description">Produce los videos de desafíos solicitados y compite por obtener sus recompensas.</p>
+                <div className="cta__actions">
+                  <p className="cta__btn--primary"> <FaBolt/> Patrocina un desafio</p>
                   <p className="cta__btn--secondary"><MdOutlineWorkHistory />Unirse a los Promotores</p>
                 </div>
                 <div className="cta__text--dynamic"><TypingText texts={motivationalPhrases} /></div>
@@ -42,6 +69,29 @@ function Cta() {
             }
           </div>
         </div>
+        }
+
+        {
+          sidebarOption === "promoters" && <div className="cta__video-section">
+          <div className="cta__video-wrapper">
+            <video className="cta__bg-vid" src={personaVid} autoPlay loop/>
+          </div>
+          <div className="cta__overlay">
+            {
+              true && <div className="cta__text-group">
+                <p className="cta__text--small">©2025 | <span>Terms & Conditions</span></p>
+                <p className="cta__text--headline">Impulsa la Creacion <br />De Contenido</p>
+                <p className="cta__text--description">Da visibilidad a desafíos sin patrocinador, impulsa la produccion de videos y promociona suscripciones</p>
+                <div className="cta__actions">
+                  <p className="cta__btn--primary"> <FaBolt/> Promociona Y Gana</p>
+                  <p className="cta__btn--secondary"><MdOutlineWorkHistory />Unirse a los Promotores</p>
+                </div>
+                <div className="cta__text--dynamic"><TypingText texts={motivationalPhrases} /></div>
+              </div>
+            }
+          </div>
+        </div>
+        }
 
         <div className="cta__sidebar">
           <SiYoutubeshorts className="cta__sidebar--icon" />

@@ -43,7 +43,7 @@ export default function JobPost({
       <div className="job-post__user-header">
         <div className="job-post__user-info">
           <p className="job-post__username">
-            {"Sponsored"}
+            Job
             <span>
               | <FaStar />
             </span>
