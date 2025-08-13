@@ -5,11 +5,14 @@ import { RiTimerLine } from "react-icons/ri";
 import { CiMenuKebab } from "react-icons/ci";
 import { useState } from "react";
 import { TbClock } from "react-icons/tb";
-import type { ChallengeProps } from "../util/challengesMock";
+import type { ChallengeProps } from "../../util/challengesMock";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { FiEye } from "react-icons/fi";
-import { FaCheck } from "react-icons/fa6";
+import { FaCartShopping, FaCheck } from "react-icons/fa6";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import { BsCreditCard2Back } from "react-icons/bs";
+import { HiOutlineCreditCard } from "react-icons/hi";
+import { HiMiniCreditCard } from "react-icons/hi2";
 
 export default function ChallengePost({
   description,
@@ -47,9 +50,9 @@ export default function ChallengePost({
       <div className="challenge-post__user-header">
         <div className="challenge-post__user-info">
           <p className="challenge-post__username">
-            Nuevo
+            Challenge |
             <span>
-              <IoMdCheckmarkCircleOutline />
+              <FaCartShopping className="challenge-post__for"/>
             </span>
           </p>
           <p className="challenge-post__handle">@Male</p>
@@ -109,7 +112,7 @@ export default function ChallengePost({
         </div>
         <div className="challenge-post__footer-left">
           <p className="challenge-post__sponsor-badge">
-            $ Fund Challenge
+            <HiMiniCreditCard /> Fund Challenge
           </p>
         </div>
       </div>

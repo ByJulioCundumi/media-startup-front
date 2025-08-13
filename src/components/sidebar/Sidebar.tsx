@@ -13,7 +13,9 @@ import { PiHandSwipeLeftThin } from 'react-icons/pi';
 import { setSidebar } from '../../reducers/sidebarSlice';
 import type { IState } from '../../interfaces/IState';
 import './Sidebar.scss';
-import { FaCartShopping } from 'react-icons/fa6';
+import { FaBullhorn, FaCartShopping } from 'react-icons/fa6';
+import { FcAdvertising } from 'react-icons/fc';
+import { ImBullhorn } from 'react-icons/im';
 
 const Sidebar: React.FC = () => {
   const { sidebarOption } = useSelector((state: IState) => state.sidebar);
@@ -67,16 +69,16 @@ const Sidebar: React.FC = () => {
             className={sidebarOption === "promoters" ? "sidebar__menu-item-active" : "sidebar__menu-item"}
           >
             <div className="sidebar__tooltip-container">
-              <span className="sidebar__icon"><MdMoneyOff  /></span>
+              <span className="sidebar__icon"><ImBullhorn  /></span>
               <span className="sidebar__tooltip">Join Promoters</span>
             </div>
           </Link>
 
           {/* Explore */}
           <Link
-            to="/explore"
-            onClick={() => dispatch(setSidebar("explore"))}
-            className={sidebarOption === "explore" ? "sidebar__menu-item-active" : "sidebar__menu-item"}
+            to="/content"
+            onClick={() => dispatch(setSidebar("content"))}
+            className={sidebarOption === "content" ? "sidebar__menu-item-active" : "sidebar__menu-item"}
           >
             <div className="sidebar__tooltip-container">
               <span className="sidebar__icon sidebar__explore-icon"><RiSearch2Line /></span>
@@ -92,7 +94,7 @@ const Sidebar: React.FC = () => {
           >
             <div className="sidebar__tooltip-container">
               <span className="sidebar__icon"><BsInfoSquare /></span>
-              <span className="sidebar__tooltip">About VipChallengers</span>
+              <span className="sidebar__tooltip">About Challenge Kingdom</span>
             </div>
           </Link>
 

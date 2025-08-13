@@ -1,5 +1,5 @@
 import "./globalpromoterposts.scss"
-import { mockProposals } from '../../../components/util/challengesMock'
+import { mockProposals } from '../../../util/challengesMock'
 import PromoterPost from '../../../components/promoter-post/PromoterPost'
 
 function GlobalPromoterPosts() {

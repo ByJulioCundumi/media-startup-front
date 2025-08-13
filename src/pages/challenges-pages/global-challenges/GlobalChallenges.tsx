@@ -1,6 +1,6 @@
 import "./globalchallenges.scss";
 import ChallengePost from "../../../components/challenge-post/ChallengePost";
-import { mockProposals } from "../../../components/util/challengesMock";
+import { mockProposals } from "../../../util/challengesMock";
 
 function GlobalChallenges() {
 

@@ -10,7 +10,7 @@ import { useSelector } from "react-redux"
 import type { IState } from "../../interfaces/IState"
 import personaVid from "../../assets/vid/vid-7.mp4"
 import cashVid from "../../assets/vid/vid-2.mp4"
-import editVid from "../../assets/vid/vid-10.mp4"
+import editVid from "../../assets/vid/vid-5.mp4"
 
 function Cta() {
   const {sidebarOption} = useSelector((state:IState)=>state.sidebar)
@@ -36,10 +36,10 @@ function Cta() {
             {
               true && <div className="cta__text-group">
                 <p className="cta__text--small">©2025 | <span>Terms & Conditions</span></p>
-                <p className="cta__text--headline">Publica el Próximo  <br />Gran Desafio</p>
-                <p className="cta__text--description">Plantea el Concepto y lo haremos realidad. Tus ideas más locas, transformadas en videos reales 😮</p>
+                <p className="cta__text--headline">Crea el Próximo  <br />Gran Desafio</p>
+                <p className="cta__text--description">Plantea el Concepto y lo haremos realidad. Tus ideas más locas, transformadas en videos reales</p>
                 <div className="cta__actions">
-                  <p className="cta__btn--primary"> <FaBolt/> Solicita un desafio</p>
+                  <p className="cta__btn--primary"> <FaBolt/> Crea un desafio</p>
                   <p className="cta__btn--secondary"><MdOutlineWorkHistory />Unete a los Promotores</p>
                 </div>
                 <div className="cta__text--dynamic"><TypingText texts={motivationalPhrases} /></div>
@@ -81,7 +81,7 @@ function Cta() {
               true && <div className="cta__text-group">
                 <p className="cta__text--small">©2025 | <span>Terms & Conditions</span></p>
                 <p className="cta__text--headline">Impulsa la Creacion <br />De Contenido</p>
-                <p className="cta__text--description">Da visibilidad a desafíos sin patrocinador, impulsa la produccion de videos y promociona suscripciones</p>
+                <p className="cta__text--description">Da visibilidad a desafíos sin patrocinador, impulsa la produccion de videos y promociona membresias</p>
                 <div className="cta__actions">
                   <p className="cta__btn--primary"> <FaBolt/> Promociona Y Gana</p>
                   <p className="cta__btn--secondary"><MdOutlineWorkHistory />Unirse a los Promotores</p>

@@ -5,8 +5,10 @@ import { RiTimerLine } from "react-icons/ri";
 import { CiMenuKebab } from "react-icons/ci";
 import { useState } from "react";
 import { TbClock } from "react-icons/tb";
-import type { ChallengeProps } from "../util/challengesMock";
+import type { ChallengeProps } from "../../util/challengesMock";
 import { FiEye } from "react-icons/fi";
+import { ImBullhorn } from "react-icons/im";
+import { GiPodiumWinner } from "react-icons/gi";
 
 export default function PromoterPost({
   description,
@@ -36,7 +38,7 @@ export default function PromoterPost({
         <button className="promoter-post__header-btn">
           <TbClock />
         </button>
-        <button className="promoter-post__header-btn"><span className="promoter-post__views">(214)</span> <FiEye /></button>
+        <button className="promoter-post__header-btn"><span className="promoter-post__views">Available</span></button>
         <CiMenuKebab className="promoter-post__options-icon" />
       </div>
 
@@ -46,7 +48,7 @@ export default function PromoterPost({
           <p className="promoter-post__username">
             For Promoters
             <span>
-              | <FaStar />
+              | <ImBullhorn className="promoter-post__for"/>
             </span>
           </p>
           <p className="promoter-post__handle">@Male</p>
@@ -90,7 +92,7 @@ export default function PromoterPost({
         </div>
 
         <div className="promoter-post__my-price">
-          <p className="promoter-post__pricing-label">Reward</p>
+          <p className="promoter-post__pricing-label">Bounty</p>
           <p className="promoter-post__pricing-amount">
             $ {price.toFixed(2)} <span>(USD)</span>
           </p>
@@ -106,7 +108,7 @@ export default function PromoterPost({
         </div>
         <div className="promoter-post__footer-left">
           <p className="promoter-post__sponsor-badge">
-            Share To Win <FaHandPeace />
+            $ Promote And Win 
           </p>
         </div>
       </div>

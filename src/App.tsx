@@ -8,6 +8,8 @@ import JobsPage from './pages/jobs-page/JobsPage'
 import GlobalJobs from './pages/jobs-page/global-jobs/GlobalJobs'
 import PromotersPage from './pages/promoters-page/PromotersPage'
 import GlobalPromoterPosts from './pages/promoters-page/global-promoter-posts/GlobalPromoterPosts'
+import ContentPage from './pages/content-page/ContentPage'
+import GlobalContent from './pages/content-page/global-content/GlobalContent'
 
 function App() {
 
@@ -36,6 +38,12 @@ function App() {
 
           <Route path="/promoters" element={<PromotersPage />}>
             <Route path="" element={<GlobalPromoterPosts />}>
+            
+            </Route>
+          </Route>
+
+          <Route path="/content" element={<ContentPage />}>
+            <Route path="" element={<GlobalContent />}>
             
             </Route>
           </Route>

@@ -71,3 +71,22 @@
     }
   }
 }
+
+
+.pay-subscription-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #00aaff;
+
+  &__icon {
+    font-size: 16px;
+  }
+}

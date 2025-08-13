@@ -1,11 +1,15 @@
 import "./jobpost.scss";
 import { FaMale, FaRegComment, FaHandPeace, FaStar } from "react-icons/fa";
 import { GoHeart, GoHeartFill } from "react-icons/go";
-import { RiTimerLine } from "react-icons/ri";
+import { RiTimerLine, RiUploadCloudFill } from "react-icons/ri";
 import { CiMenuKebab } from "react-icons/ci";
 import { useState } from "react";
 import { TbClock } from "react-icons/tb";
-import type { ChallengeProps } from "../util/challengesMock";
+import type { ChallengeProps } from "../../util/challengesMock";
+import { MdOutlineDriveFolderUpload, MdWorkHistory } from "react-icons/md";
+import { GiThunderBlade } from "react-icons/gi";
+import { LuHardDriveUpload, LuMousePointerClick } from "react-icons/lu";
+import { IoCloudUploadSharp } from "react-icons/io5";
 
 export default function JobPost({
   description,
@@ -33,9 +37,9 @@ export default function JobPost({
           <FaMale />
         </p>
         <button className="job-post__header-btn">
-          <TbClock />
+          <TbClock /> <span className="job-post__workers">7D</span>
         </button>
-        <button className="job-post__header-btn"><span className="job-post__workers">(0) Creators</span></button>
+        <button className="job-post__header-btn"><span className="job-post__workers">Available</span></button>
         <CiMenuKebab className="job-post__options-icon" />
       </div>
 
@@ -45,7 +49,7 @@ export default function JobPost({
           <p className="job-post__username">
             Job
             <span>
-              | <FaStar />
+              | <MdWorkHistory className="job-post__for"/>
             </span>
           </p>
           <p className="job-post__handle">@Male</p>
@@ -89,7 +93,7 @@ export default function JobPost({
         </div>
 
         <div className="job-post__my-price">
-          <p className="job-post__pricing-label">Reward</p>
+          <p className="job-post__pricing-label">Bounty</p>
           <p className="job-post__pricing-amount">
             $ {price.toFixed(2)} <span>(USD)</span>
           </p>
@@ -105,7 +109,7 @@ export default function JobPost({
         </div>
         <div className="job-post__footer-left">
           <p className="job-post__sponsor-badge">
-            Submit My Video <FaHandPeace />
+            Submit My Video <RiUploadCloudFill />
           </p>
         </div>
       </div>

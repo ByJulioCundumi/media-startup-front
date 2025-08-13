@@ -3,7 +3,7 @@ import './languageselect.scss';
 import { setLanguage } from '../../reducers/languageSlice';
 import { useSelector, useDispatch } from 'react-redux';  // <-- agregar dispatch
 import type { IState } from '../../interfaces/IState';
-import { supportedLanguages } from '../util/supportedLanguages';
+import { supportedLanguages } from '../../util/supportedLanguages';
 import { TbLanguage, TbWorldPin } from 'react-icons/tb';
 
 const LanguageSelect: React.FC = () => {

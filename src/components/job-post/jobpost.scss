@@ -225,6 +225,10 @@
     }
   }
 
+  &__for{
+    margin-bottom: -0.1rem;
+  }
+
   &__gender-icon {
     font-size: 1rem;
     background-color: #f1f5f9;
@@ -260,4 +264,18 @@
 .job-post__see-more:hover {
   color: #0056b3;
   text-decoration: underline;
+}
+
+.job-post {
+  background: linear-gradient(135deg, #f9fafb 0%, #f0fdfa 50%, #ecfdf5 100%);
+  position: relative;
+
+  /* Patrón sutil como marca de agua */
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.02) 0,
+    rgba(0, 0, 0, 0.02) 1px,
+    transparent 1px,
+    transparent 8px
+  );
 }

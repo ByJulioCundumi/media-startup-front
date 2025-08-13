@@ -38,7 +38,6 @@ export const CategorySelector: React.FC = () => {
 
   return (
     <div className="category-selector-wrapper">
-      <span className='category-info'>Topics</span>
 
       <button className="arrow-button left" onClick={() => scroll('left')}>‹</button>
 

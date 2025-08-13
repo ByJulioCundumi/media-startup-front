@@ -1,5 +1,5 @@
 import JobPost from "../../../components/job-post/JobPost"
-import { mockProposals } from "../../../components/util/challengesMock"
+import { mockProposals } from "../../../util/challengesMock"
 import "./globaljobs.scss"
 
 function GlobalJobs() {

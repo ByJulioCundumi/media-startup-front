@@ -1,0 +1,8 @@
+.global-content{
+    padding: 1rem 7.5rem;
+    padding-top: 6rem;
+    padding-right: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 1.5rem;
+}
