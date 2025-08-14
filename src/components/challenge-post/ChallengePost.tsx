@@ -1,17 +1,13 @@
 import "./challengepost.scss";
-import { FaMale, FaRegComment, FaHandPeace, FaStar } from "react-icons/fa";
+import { FaMale, FaRegComment } from "react-icons/fa";
 import { GoHeart, GoHeartFill } from "react-icons/go";
 import { RiTimerLine } from "react-icons/ri";
 import { CiMenuKebab } from "react-icons/ci";
 import { useState } from "react";
 import { TbClock } from "react-icons/tb";
 import type { ChallengeProps } from "../../util/challengesMock";
-import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { FiEye } from "react-icons/fi";
-import { FaCartShopping, FaCheck } from "react-icons/fa6";
-import { IoMdCheckmarkCircleOutline } from "react-icons/io";
-import { BsCreditCard2Back } from "react-icons/bs";
-import { HiOutlineCreditCard } from "react-icons/hi";
+import { FaCartShopping } from "react-icons/fa6";
 import { HiMiniCreditCard } from "react-icons/hi2";
 
 export default function ChallengePost({
@@ -96,7 +92,7 @@ export default function ChallengePost({
         </div>
 
         <div className="challenge-post__my-price">
-          <p className="challenge-post__pricing-label">Req. Budget</p>
+          <p className="challenge-post__pricing-label">Price</p>
           <p className="challenge-post__pricing-amount">
             $ {price.toFixed(2)} <span>(USD)</span>
           </p>
@@ -107,12 +103,12 @@ export default function ChallengePost({
       <div className="challenge-post__footer">
         <div className="challenge-post__pricing">
           <p className="challenge-post__participants--text">
-            <RiTimerLine /> Waiting For Sponsor
+            <RiTimerLine /> Make it happen
           </p>
         </div>
         <div className="challenge-post__footer-left">
           <p className="challenge-post__sponsor-badge">
-            <HiMiniCreditCard /> Fund Challenge
+            <HiMiniCreditCard /> Request Production
           </p>
         </div>
       </div>

@@ -1,0 +1,406 @@
+/* src/components/AuthPopup/authpopup.scss */
+.auth-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.85); // fondo oscuro semitransparente
+    display: flex;
+    justify-content: center;
+    overflow-y: scroll;
+  }
+
+  &__close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+  }
+
+  &__container {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    margin: 2rem;
+  }
+
+  /* ───── Lado izquierdo ───── */
+  &__left {
+    width: 50%;
+    background-color: rgb(12, 44, 83);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    color: white;
+  }
+
+  /* ───── Lado derecho ───── */
+  &__right {
+    width: 50%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  &__text-container {
+    text-align: center;
+    max-width: 600px;
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+
+    &--highlight {
+      color: rgb(4, 121, 255);
+    }
+  }
+
+  &__description {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgb(247, 245, 245);
+  }
+
+  &__brand {
+    width: 100%;
+    text-align: center;
+  }
+
+  &__brand-btn {
+    background-color: transparent;
+    border: none;
+    color: gray;
+    font-size: 0.95rem;
+    cursor: pointer;
+  }
+
+  /* ───── Formularios ───── */
+  &__form-container {
+    width: 100%;
+    max-width: 400px;
+    height: fit-content;
+    max-height: 100%;
+    padding: 1.5rem 2rem;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+    overflow-y: scroll;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__form-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #4b5563;
+    text-align: center;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 0.9rem;
+
+    &:focus {
+      outline: none;
+      border-color: rgb(99, 192, 255);
+    }
+  }
+
+  &__country{
+    display: flex;
+    align-items: center;
+    margin-left: -0.2rem;
+  }
+
+  &__gender {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__gender-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #4b5563;
+  }
+
+  &__select {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 0.9rem;
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: #4b5563;
+
+    input {
+      accent-color: rgb(0, 153, 255);
+    }
+
+    a {
+      color: rgb(0, 153, 255);
+      text-decoration: underline;
+    }
+  }
+
+  &__btn {
+    padding: 0.7rem 1rem;
+    border-radius: 20px;
+    background-color: rgb(0, 153, 255);
+    color: white;
+    width: 100%;
+    font-weight: 500;
+    font-size: 0.9rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: rgb(0, 132, 220);
+    }
+  }
+
+  &__terms {
+    font-size: 0.8rem;
+    color: #6b7280;
+    text-align: center;
+  }
+
+  &__link {
+    color: rgb(0, 153, 255);
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  &__action {
+    font-size: 0.9rem;
+    color: rgb(0, 153, 255);
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  /* ───── Responsivo ───── */
+  @media (max-width: 800px) {
+    &__container {
+      flex-direction: column;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    &__left,
+    &__right {
+      width: 100%;
+      padding: 1rem;
+    }
+
+    &__title {
+      font-size: 1.8rem;
+    }
+
+    &__form-title {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+.auth-page__error {
+  font-size: 0.8rem;
+  color: #ef4444;
+  margin-top: -0.5rem;
+}
+
+/* ─────────── Left Panel Upgrades ─────────── */
+.auth-page {
+  &__left {
+    position: relative;
+    width: 50%;
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(
+      135deg,
+      #00a6ff 45%,
+      #0077ff 100%
+    );
+    color: #ffffff;
+    overflow: hidden;
+
+    /* decoraciones suaves */
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.3;
+    }
+    &::before {
+      width: 300px;
+      height: 300px;
+      background: #00c6ff;
+      top: -80px;
+      left: -80px;
+    }
+    &::after {
+      width: 240px;
+      height: 240px;
+      background: #f0f9ff;
+      bottom: -60px;
+      right: -60px;
+    }
+  }
+
+  &__branding {
+    position: relative; /* mantiene las pseudo-decoraciones detrás */
+    z-index: 1;
+    margin-bottom: 2rem;
+  }
+
+  &__logo {
+    width: 100px;
+    margin-bottom: 0.5rem;
+    filter: brightness(0) invert(100%);
+  }
+
+  &__headline {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  &__subtitle {
+    font-size: 1rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    max-width: 22ch;
+  }
+
+  &__bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      svg {
+        flex-shrink: 0;
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  &__footer {
+    position: relative;
+    z-index: 1;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    text-align: center;
+  }
+
+  /* ─── Responsivo ─── */
+  @media (max-width: 800px) {
+    &__left {
+      width: 100%;
+      padding: 2rem 1.5rem;
+      order: 2; /* coloca branding debajo del formulario en mobile */
+    }
+    &__headline {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.auth-page__input-wrapper { position: relative; }
+.auth-page__eye {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: color .2s;
+  &:hover { color: #4b5563; }
+}
+
+.auth-page__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.auth-page__label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #4b5563;
+  margin-bottom: 0.2rem;
+}
+
+.auth-page__select {
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  background-color: #fff;
+  max-height: 200px; // Evita que el dropdown se expanda infinitamente
+  overflow-y: auto;
+  width: 100%;
+min-width: 260px;
+max-width: 260px;
+  &:focus {
+    outline: none;
+    border-color: rgb(99, 192, 255);
+  }
+}

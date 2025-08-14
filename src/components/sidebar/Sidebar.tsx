@@ -3,23 +3,26 @@ import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { FaRegHandPeace } from 'react-icons/fa';
-import { MdMoneyOff, MdOutlineWorkOutline, MdWorkHistory } from 'react-icons/md';
+import { MdWorkHistory } from 'react-icons/md';
 import { BsInfoSquare } from 'react-icons/bs';
-import { RiLoginBoxLine, RiSearch2Line, RiShoppingCartLine } from 'react-icons/ri';
+import { RiLoginBoxLine, RiSearch2Line } from 'react-icons/ri';
 import { HiOutlineViewGridAdd } from 'react-icons/hi';
-import { LuMessageCircleQuestion } from 'react-icons/lu';
 import { PiHandSwipeLeftThin } from 'react-icons/pi';
 
 import { setSidebar } from '../../reducers/sidebarSlice';
 import type { IState } from '../../interfaces/IState';
 import './Sidebar.scss';
-import { FaBullhorn, FaCartShopping } from 'react-icons/fa6';
-import { FcAdvertising } from 'react-icons/fc';
+import { FaCartShopping } from 'react-icons/fa6';
 import { ImBullhorn } from 'react-icons/im';
+import { setAuthPopupStatus } from '../../reducers/popupStatusSlice';
 
 const Sidebar: React.FC = () => {
   const { sidebarOption } = useSelector((state: IState) => state.sidebar);
   const dispatch = useDispatch();
+
+  const loginRequired = ()=>{
+    dispatch(setAuthPopupStatus("opened"))
+  }
 
   const handleLogout = async () => {
     // TODO: Implementar logout
@@ -31,7 +34,7 @@ const Sidebar: React.FC = () => {
         <ul className="sidebar__menu">
 
           {/* Login */}
-          <div className={`sidebar__menu-item sidebar__profile-active ${sidebarOption === 'authentication' ? 'sidebar__menu-item-active' : ''}`}>
+          <div onClick={loginRequired} className={`sidebar__menu-item sidebar__profile-active ${sidebarOption === 'authentication' ? 'sidebar__menu-item-active' : ''}`}>
             <div className="sidebar__tooltip-container">
               <RiLoginBoxLine className='sidebar__login-user' />
               <span className="sidebar__tooltip">Iniciar Sesion <FaRegHandPeace /></span>
@@ -99,7 +102,7 @@ const Sidebar: React.FC = () => {
           </Link>
 
           {/* Crear cuenta */}
-          <div className={sidebarOption === "my-posts" ? "sidebar__menu-item-active" : "sidebar__menu-item"}>
+          <div onClick={loginRequired} className={sidebarOption === "my-posts" ? "sidebar__menu-item-active" : "sidebar__menu-item"}>
             <div className="sidebar__tooltip-container">
               <span className="sidebar__icon"><HiOutlineViewGridAdd /></span>
               <span className="sidebar__tooltip">Create your account</span>
@@ -110,7 +113,7 @@ const Sidebar: React.FC = () => {
       </div>
 
       {/* Footer */}
-      <div className="sidebar__bottom" onClick={handleLogout}>
+      <div onClick={loginRequired} className="sidebar__bottom">
         <div className="sidebar__tooltip-container logout" role="button" tabIndex={0}>
           <span className="sidebar__icon"><PiHandSwipeLeftThin /></span>
           <span className="sidebar__tooltip">Login required :)</span>

@@ -207,6 +207,11 @@
   &__pricing-label {
     font-size: 0.85rem;
     color: #475569;
+
+    &-final{
+      font-size: 0.95rem;
+      color: #272f3a;
+    }
   }
 
   &__pricing-amount {

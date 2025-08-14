@@ -1,0 +1,52 @@
+.about-terms {
+  padding: 2.5rem;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  margin-bottom: 3rem;
+
+  &__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    border-left: 6px solid #3464e0;
+    padding-left: 1rem;
+    color: #1c1c1c;
+  }
+
+  &__intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.8rem;
+    color: #444;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+
+    li {
+      margin-bottom: 1.2rem;
+      font-size: 1.05rem;
+      color: #333;
+      background-color: #f8faff;
+      padding: 1rem 1.2rem;
+      border-left: 4px solid #3464e0;
+      border-radius: 8px;
+
+      strong {
+        color: #1e3fa1;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__disclaimer {
+    font-size: 0.95rem;
+    color: #666;
+    font-style: italic;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 1rem;
+  }
+}

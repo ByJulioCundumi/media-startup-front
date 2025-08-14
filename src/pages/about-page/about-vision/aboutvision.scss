@@ -1,0 +1,79 @@
+.about-vision {
+  padding: 2.5rem;
+  background-color: #f5f7fb;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  margin-bottom: 3rem;
+  transition: all 0.3s ease;
+
+  &__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border-left: 6px solid #0073e6;
+    padding-left: 1.2rem;
+    color: #1a1a1a;
+  }
+
+  &__intro {
+    font-size: 1.125rem;
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    color: #2c2c2c;
+  }
+
+  p {
+    font-size: 1.125rem;
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+    color: #2c2c2c;
+  }
+
+  strong {
+    color: #000;
+    font-weight: 600;
+  }
+
+  em {
+    font-style: italic;
+    color: #d35400;
+    font-weight: 600;
+  }
+
+  &__callout {
+    font-size: 1.05rem;
+    margin: 2rem 0;
+    padding: 1.25rem 1.5rem;
+    border-radius: 10px;
+    font-weight: 500;
+    line-height: 1.75;
+    background-color: #fff3cd;
+    border-left: 5px solid #ffca2c;
+    color: #856404;
+
+    &--blue {
+      background-color: #d9ecff;
+      border-left: 5px solid #3399ff;
+      color: #003366;
+    }
+
+    &--yellow {
+      background-color: #fff7d6;
+      border-left: 5px solid #ffcc00;
+      color: #665200;
+    }
+  }
+
+  &__closing {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #111;
+    background: linear-gradient(90deg, #fff2cc 0%, #ffe4a1 100%);
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    margin-top: 3rem;
+    line-height: 1.8;
+  }
+}

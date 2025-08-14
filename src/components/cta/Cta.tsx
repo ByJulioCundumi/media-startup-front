@@ -2,9 +2,7 @@ import "./cta.scss"
 import { MdOutlineWorkHistory } from "react-icons/md"
 import { FaBolt } from "react-icons/fa6"
 import TypingText from "../typing-text/TypingText"
-import { SiYoutubekids, SiYoutubeshorts } from "react-icons/si"
 import { RiBriefcaseLine, RiLoginBoxLine, RiUserAddLine } from "react-icons/ri"
-import { GiLaurelCrown } from "react-icons/gi"
 import { useDispatch, useSelector } from "react-redux"
 import type { IState } from "../../interfaces/IState"
 import bgImg from "../../assets/img/bg-img.gif"
@@ -36,10 +34,10 @@ function Cta() {
             {
               true && <div className="cta__text-group">
                 <p className="cta__text--small">©2025 | <span>Terms & Conditions</span></p>
-                <p className="cta__text--headline">Crea el Próximo  <br />Gran Desafio</p>
+                <p className="cta__text--headline">Solicita el Próximo  <br />Gran Desafio</p>
                 <p className="cta__text--description">Plantea el Concepto y lo haremos realidad. Tus ideas más locas, transformadas en videos reales</p>
                 <div className="cta__actions">
-                  <p className="cta__btn--primary"> <FaBolt/> Crea un desafio</p>
+                  <p className="cta__btn--primary"> <FaBolt/> Solicitar desafio</p>
                   <p className="cta__btn--secondary"><MdOutlineWorkHistory />Unete a los Promotores</p>
                 </div>
                 <div className="cta__text--dynamic"><TypingText texts={motivationalPhrases} /></div>
@@ -61,7 +59,7 @@ function Cta() {
                 <p className="cta__text--headline">Completa Trabajos  <br /> Financiados</p>
                 <p className="cta__text--description">Produce y Entrega videos de desafíos solicitados y compite por obtener sus recompensas.</p>
                 <div className="cta__actions">
-                  <p className="cta__btn--primary"> <FaBolt/> Patrocina un desafio</p>
+                  <p className="cta__btn--primary"> <FaBolt/> Financiar desafio</p>
                   <p className="cta__btn--secondary"><MdOutlineWorkHistory />Unirse a los Promotores</p>
                 </div>
                 <div className="cta__text--dynamic"><TypingText texts={motivationalPhrases} /></div>

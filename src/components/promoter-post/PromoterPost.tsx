@@ -1,6 +1,5 @@
 import "./promoterpost.scss";
-import { FaMale, FaRegComment, FaHandPeace, FaStar } from "react-icons/fa";
-import { GoHeart, GoHeartFill } from "react-icons/go";
+import { FaMale } from "react-icons/fa";
 import { RiTimerLine } from "react-icons/ri";
 import { CiMenuKebab } from "react-icons/ci";
 import { useState } from "react";
@@ -8,7 +7,6 @@ import { TbClock } from "react-icons/tb";
 import type { ChallengeProps } from "../../util/challengesMock";
 import { FiEye } from "react-icons/fi";
 import { ImBullhorn } from "react-icons/im";
-import { GiPodiumWinner } from "react-icons/gi";
 
 export default function PromoterPost({
   description,
@@ -80,17 +78,7 @@ export default function PromoterPost({
       {/* Stats */}
       <div className="promoter-post__participants">
         <div className="promoter-post__stats">
-          <p
-            className="promoter-post__stat"
-            onClick={handleToggleLike}
-          >
-            {liked ? (
-              <GoHeartFill className="promoter-post__stat-icon" />
-            ) : (
-              <GoHeart className="promoter-post__stat-icon" />
-            )}
-            {likesCount}
-          </p>
+          <p className="promoter-post__pricing-label-final">Price: ${price.toFixed(2)}</p>
         </div>
 
         <div className="promoter-post__my-price">
@@ -105,7 +93,7 @@ export default function PromoterPost({
       <div className="promoter-post__footer">
         <div className="promoter-post__pricing">
           <p className="promoter-post__participants--text">
-            <RiTimerLine /> Find A Sponsor
+            <RiTimerLine /> Find Sponsor & Producer
           </p>
         </div>
         <div className="promoter-post__footer-left">

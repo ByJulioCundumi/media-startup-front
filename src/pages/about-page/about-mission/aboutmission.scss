@@ -1,0 +1,91 @@
+.about-mission {
+  padding: 2.5rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 48, 96, 0.05);
+  transition: all 0.3s ease;
+
+  &__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #143f66;
+    border-left: 6px solid #2a6edc;
+    padding-left: 1.2rem;
+  }
+
+  &__intro {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #123652;
+    margin-bottom: 1.8rem;
+  }
+
+  p {
+    font-size: 1.15rem;
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+    color: #2e3e52;
+  }
+
+  &__quote {
+    font-style: italic;
+    font-size: 1.15rem;
+    margin: 2rem 0;
+    padding: 1.25rem 1.5rem;
+    background-color: #dceeff;
+    border-left: 5px solid #2a6edc;
+    color: #13447c;
+    border-radius: 8px;
+  }
+
+  &__callout {
+    font-size: 1.05rem;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    border-radius: 12px;
+    font-weight: 500;
+    line-height: 1.75;
+    border-left: 5px solid;
+
+    &--blue {
+      background-color: #d6eaff;
+      border-left-color: #2a6edc;
+      color: #0e375e;
+    }
+
+    &--accent {
+      background-color: #eaf6ff;
+      border-left-color: #1e88e5;
+      color: #144b6e;
+    }
+  }
+
+  &__closing {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #10375c;
+    background: linear-gradient(90deg, #d7e9ff 0%, #b8d5ff 100%);
+    border-radius: 12px;
+    padding: 1.75rem;
+    text-align: center;
+    margin-top: 3rem;
+    line-height: 1.9;
+
+    em {
+      font-style: normal;
+      font-weight: 700;
+      color: #0d47a1;
+    }
+  }
+
+  strong {
+    color: #0e1e2f;
+    font-weight: 600;
+  }
+
+  em {
+    font-style: italic;
+    color: #255b8f;
+  }
+}

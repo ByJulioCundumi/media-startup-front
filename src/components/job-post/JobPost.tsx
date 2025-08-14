@@ -1,15 +1,12 @@
 import "./jobpost.scss";
-import { FaMale, FaRegComment, FaHandPeace, FaStar } from "react-icons/fa";
+import { FaMale, FaRegComment } from "react-icons/fa";
 import { GoHeart, GoHeartFill } from "react-icons/go";
 import { RiTimerLine, RiUploadCloudFill } from "react-icons/ri";
 import { CiMenuKebab } from "react-icons/ci";
 import { useState } from "react";
 import { TbClock } from "react-icons/tb";
 import type { ChallengeProps } from "../../util/challengesMock";
-import { MdOutlineDriveFolderUpload, MdWorkHistory } from "react-icons/md";
-import { GiThunderBlade } from "react-icons/gi";
-import { LuHardDriveUpload, LuMousePointerClick } from "react-icons/lu";
-import { IoCloudUploadSharp } from "react-icons/io5";
+import { MdWorkHistory } from "react-icons/md";
 
 export default function JobPost({
   description,
