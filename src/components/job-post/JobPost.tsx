@@ -101,7 +101,7 @@ export default function JobPost({
       <div className="job-post__footer">
         <div className="job-post__pricing">
           <p className="job-post__participants--text">
-            <RiTimerLine /> Seeking Content Creators
+            <RiTimerLine /> For Freelance Creators
           </p>
         </div>
         <div className="job-post__footer-left">

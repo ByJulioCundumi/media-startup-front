@@ -30,7 +30,7 @@ function Navbar() {
         <p className="navbar__sidebar-user">Go</p>
         <div className="navbar__brand">
             <SiYoutubeshorts className="navbar__brand--icon"/>
-            <h1 className="navbar__brand--title"><span className="navbar__brand--title-blue">Challenge</span>Kingdom</h1>
+            <h1 className="navbar__brand--title"><span className="navbar__brand--title-blue">Challenge</span>Clips</h1>
         </div>
         
         <div className="navbar__right">

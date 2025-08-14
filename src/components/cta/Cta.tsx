@@ -56,10 +56,10 @@ function Cta() {
             {
               true && <div className="cta__text-group">
                 <p className="cta__text--small">©2025 | <span>Terms & Conditions</span></p>
-                <p className="cta__text--headline">Completa Trabajos  <br /> Financiados</p>
+                <p className="cta__text--headline">Completa Trabajos  <br /> Habilitados</p>
                 <p className="cta__text--description">Produce y Entrega videos de desafíos solicitados y compite por obtener sus recompensas.</p>
                 <div className="cta__actions">
-                  <p className="cta__btn--primary"> <FaBolt/> Financiar desafio</p>
+                  <p className="cta__btn--primary"> <FaBolt/> Solicitar desafio</p>
                   <p className="cta__btn--secondary"><MdOutlineWorkHistory />Unirse a los Promotores</p>
                 </div>
                 <div className="cta__text--dynamic"><TypingText texts={motivationalPhrases} /></div>
