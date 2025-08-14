@@ -95,7 +95,7 @@ export default function JobPost({
         <div className="job-post__my-price">
           <p className="job-post__pricing-label">Bounty</p>
           <p className="job-post__pricing-amount">
-            $ {price.toFixed(2)} <span>(USD)</span>
+            $ {(price*0.7).toFixed(2)} <span>(USD)</span>
           </p>
         </div>
       </div>

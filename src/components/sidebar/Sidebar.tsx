@@ -46,19 +46,7 @@ const Sidebar: React.FC = () => {
           >
             <div className="sidebar__tooltip-container">
               <span className="sidebar__icon"><FaCartShopping /></span>
-              <span className="sidebar__tooltip">Global Challenges</span>
-            </div>
-          </Link>
-
-          {/* Market */}
-          <Link
-            to="/jobs"
-            onClick={() => dispatch(setSidebar("jobs"))}
-            className={sidebarOption === "jobs" ? "sidebar__menu-item-active" : "sidebar__menu-item"}
-          >
-            <div className="sidebar__tooltip-container">
-              <span className="sidebar__icon"><MdWorkHistory className='jobs-pulse'/></span>
-              <span className="sidebar__tooltip">Jobs | Work with us</span>
+              <span className="sidebar__tooltip">Available Challenges</span>
             </div>
           </Link>
 
@@ -71,6 +59,18 @@ const Sidebar: React.FC = () => {
             <div className="sidebar__tooltip-container">
               <span className="sidebar__icon"><ImBullhorn  /></span>
               <span className="sidebar__tooltip">Join Promoters</span>
+            </div>
+          </Link>
+
+          {/* Market */}
+          <Link
+            to="/jobs"
+            onClick={() => dispatch(setSidebar("jobs"))}
+            className={sidebarOption === "jobs" ? "sidebar__menu-item-active" : "sidebar__menu-item"}
+          >
+            <div className="sidebar__tooltip-container">
+              <span className="sidebar__icon"><MdWorkHistory className='jobs-pulse'/></span>
+              <span className="sidebar__tooltip">Jobs | Content Creators</span>
             </div>
           </Link>
 

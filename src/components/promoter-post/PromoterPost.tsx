@@ -20,6 +20,7 @@ export default function PromoterPost({
 }: ChallengeProps) {
   const [expanded, setExpanded] = useState(false);
   const [liked, setLiked] = useState(likedByMe ?? false);
+  const [blurred, setBlurred] = useState(true);
 
   const handleToggleLike = async () => {};
   const openPost = () => {};
@@ -38,7 +39,7 @@ export default function PromoterPost({
         <button className="promoter-post__header-btn">
           <TbClock />
         </button>
-        <button className="promoter-post__header-btn"><span className="promoter-post__views">Available</span></button>
+        <button className="promoter-post__header-btn"><span className="promoter-post__views">(214)</span> <FiEye /></button>
         <CiMenuKebab className="promoter-post__options-icon" />
       </div>
 
@@ -56,20 +57,25 @@ export default function PromoterPost({
       </div>
 
       {/* Description */}
-      <p className="promoter-post__description" onClick={openPost}>
-        {visibleText}
-        {isLong && (
-          <span
-            className="promoter-post__see-more"
-            onClick={(e) => {
-              e.stopPropagation();
-              setExpanded((prev) => !prev);
-            }}
-          >
-            …{toggleText}
-          </span>
-        )}
-      </p>
+      <div className="promoter-post__description-wrapper">
+        <p
+          className={`promoter-post__description ${blurred ? "promoter-post__description--blur" : ""}`}
+          onClick={openPost}
+        >
+          {visibleText}
+          {isLong && (
+            <span
+              className="promoter-post__see-more"
+              onClick={(e) => {
+                e.stopPropagation();
+                setExpanded((prev) => !prev);
+              }}
+            >
+              …{toggleText}
+            </span>
+          )}
+        </p>
+      </div>
 
       {/* Stats */}
       <div className="promoter-post__participants">
@@ -85,16 +91,12 @@ export default function PromoterPost({
             )}
             {likesCount}
           </p>
-          <p className="promoter-post__stat">
-            <FaRegComment className="promoter-post__stat-icon" />
-            {commentsCount}
-          </p>
         </div>
 
         <div className="promoter-post__my-price">
           <p className="promoter-post__pricing-label">Bounty</p>
           <p className="promoter-post__pricing-amount">
-            $ {price.toFixed(2)} <span>(USD)</span>
+            $ {(price*0.2).toFixed(2)} <span>(USD)</span>
           </p>
         </div>
       </div>
@@ -108,7 +110,7 @@ export default function PromoterPost({
         </div>
         <div className="promoter-post__footer-left">
           <p className="promoter-post__sponsor-badge">
-            $ Promote And Win 
+            $ Share And Win 
           </p>
         </div>
       </div>

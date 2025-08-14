@@ -280,3 +280,14 @@
     transparent 8px
   );
 }
+
+
+.promoter-post__description-wrapper {
+  position: relative;
+}
+
+.promoter-post__description--blur {
+  filter: blur(4px);
+  pointer-events: none;
+  user-select: none;
+}
