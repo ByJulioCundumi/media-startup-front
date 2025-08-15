@@ -1,25 +1,28 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./jobspagenav.scss";
+import { useDispatch, useSelector } from "react-redux";
+import type { IState } from "../../interfaces/IState";
+import { setJobsNavbar } from "../../reducers/navbarSlice";
 
 const JobsPageNav: React.FC = () => {
-  const location = useLocation();
-
-  const approvedActive = location.pathname.startsWith("/promoters/approved");
-  const suggestionsActive = location.pathname.startsWith("/promoters/suggestions");
+  const dispatch = useDispatch()
+  const {jobsNavbar} = useSelector((state:IState)=> state.navbar)
 
   return (
     <div className="jobs-page-nav">
       <Link
-        to="/promoters/approved"
-        className={`jobs-page-nav__option ${approvedActive ? "active" : ""}`}
+        onClick={()=> dispatch(setJobsNavbar("jobs"))}
+        to="/jobs"
+        className={`jobs-page-nav__option ${jobsNavbar === "jobs" ? "active" : ""}`}
       >
         Jobs
       </Link>
 
       <Link
-        to="/promoters/suggestions"
-        className={`jobs-page-nav__option ${suggestionsActive ? "active" : ""}`}
+        onClick={()=> dispatch(setJobsNavbar("payments"))}
+        to="/jobs/payments"
+        className={`jobs-page-nav__option ${jobsNavbar === "payments" ? "active" : ""}`}
       >
         Payments Sent
       </Link>

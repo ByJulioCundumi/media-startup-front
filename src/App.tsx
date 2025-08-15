@@ -73,7 +73,7 @@ function App() {
             <Route path="" element={<GlobalContent />}>
             
             </Route>
-            <Route path="" element={<MembersPosts />}>
+            <Route path="posts" element={<MembersPosts />}>
             
             </Route>
           </Route>

@@ -16,7 +16,7 @@ const ChallengesPageNav: React.FC = () => {
         to="/"
         className={`challenges-page-nav__option ${challengesNavbar === "challenges" ? "active" : ""}`}
       >
-        Projects
+        Challenges
       </Link>
 
       <Link

@@ -32,13 +32,13 @@ export default function ChallengePost({
     <div className="challenge-post">
       {/* Header */}
       <div className="challenge-post__header-actions">
+        <p className="challenge-post__views">  <FiEye className="challenge-post__views--icon"/> 214</p>
         <p className="challenge-post__gender-icon">
           <FaMale />
         </p>
         <button className="challenge-post__header-btn">
           <TbClock />
         </button>
-        <button className="challenge-post__header-btn"> <span className="challenge-post__views">(214)</span> <FiEye /> </button>
         <CiMenuKebab className="challenge-post__options-icon" />
       </div>
 
@@ -46,12 +46,12 @@ export default function ChallengePost({
       <div className="challenge-post__user-header">
         <div className="challenge-post__user-info">
           <p className="challenge-post__username">
-            Proyect |
+            Aproved |
             <span>
               <FaCartShopping className="challenge-post__for"/>
             </span>
           </p>
-          <p className="challenge-post__handle">@Male</p>
+          <p className="challenge-post__handle">@ClipChallengers</p>
         </div>
       </div>
 
