@@ -84,7 +84,7 @@ export default function PromoterPost({
         <div className="promoter-post__my-price">
           <p className="promoter-post__pricing-label">Bounty</p>
           <p className="promoter-post__pricing-amount">
-            $ {(price*0.2).toFixed(2)} <span>(USD)</span>
+            $ {(price*0.2).toFixed(2)} <span>(USDC)</span>
           </p>
         </div>
       </div>

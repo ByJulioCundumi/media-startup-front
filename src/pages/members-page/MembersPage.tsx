@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom'
-import ChallengesNavbar from '../../components/challenges-navbar/ChallengesNavbar'
+import ChallengesNavbar from '../../components/sub-navbar/SubNavbar'
 
-function ContentPage() {
+function MembersPage() {
   return (
     <section>
         <ChallengesNavbar />
@@ -10,4 +10,4 @@ function ContentPage() {
   )
 }
 
-export default ContentPage
+export default MembersPage

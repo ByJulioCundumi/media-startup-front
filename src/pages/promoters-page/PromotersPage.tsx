@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom"
-import ChallengesNavbar from "../../components/challenges-navbar/ChallengesNavbar"
+import ChallengesNavbar from "../../components/sub-navbar/SubNavbar"
 import "./promoterspage.scss"
 import Cta from "../../components/cta/Cta"
 

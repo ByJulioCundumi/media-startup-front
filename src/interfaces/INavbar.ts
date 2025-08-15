@@ -1,3 +1,6 @@
 export interface INavbar {
-    challengesNavbar: string
+    challengesNavbar: string,
+    promotersNavbar: string,
+    jobsNavbar: string,
+    membersNavbar: string
 }

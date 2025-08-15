@@ -33,7 +33,7 @@ function Cta() {
           <div className="cta__overlay">
             {
               true && <div className="cta__text-group">
-                <p className="cta__text--small">©2025 | <span>Terms & Conditions</span></p>
+                <p className="cta__text--small"><span>©2025 | Terms & Conditions</span></p>
                 <p className="cta__text--headline">Solicita el Próximo  <br />Gran Desafio</p>
                 <p className="cta__text--description">Plantea el Concepto y lo haremos realidad. Tus ideas más locas, transformadas en videos reales</p>
                 <div className="cta__actions">
@@ -55,7 +55,7 @@ function Cta() {
           <div className="cta__overlay">
             {
               true && <div className="cta__text-group">
-                <p className="cta__text--small">©2025 | <span>Terms & Conditions</span></p>
+                <p className="cta__text--small"><span>©2025 | Terms & Conditions</span></p>
                 <p className="cta__text--headline">Completa Trabajos  <br /> Habilitados</p>
                 <p className="cta__text--description">Produce y Entrega videos de desafíos solicitados y compite por obtener sus recompensas.</p>
                 <div className="cta__actions">
@@ -77,7 +77,7 @@ function Cta() {
           <div className="cta__overlay">
             {
               true && <div className="cta__text-group">
-                <p className="cta__text--small">©2025 | <span>Terms & Conditions</span></p>
+                <p className="cta__text--small"><span>©2025 | Terms & Conditions</span></p>
                 <p className="cta__text--headline">Impulsa la Creacion <br />De Contenido</p>
                 <p className="cta__text--description">Da visibilidad a desafíos sin patrocinador, impulsa la produccion de sus videos y promociona membresias</p>
                 <div className="cta__actions">
@@ -104,7 +104,7 @@ function Cta() {
               <div className="card__icon"><GoLightBulb /></div>
               <div className="card__content">
                 <h4>Solicitar o financiar</h4>
-                <p>Impulsa desafios creativos o plantea nuevos por hacer.</p>
+                <p>Impulsa desafios divertidos o plantea nuevos por hacer.</p>
               </div>
             </div>
 
@@ -131,9 +131,6 @@ function Cta() {
             </div>
           </div>
 
-          <button className="cta__sidebar--btn" onClick={() => { /* acción */ }}>
-            <RiLoginBoxLine /> ¡Empieza ahora!
-          </button>
         </div>
 
       </div>

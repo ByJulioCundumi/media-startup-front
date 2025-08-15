@@ -46,7 +46,7 @@ export default function ChallengePost({
       <div className="challenge-post__user-header">
         <div className="challenge-post__user-info">
           <p className="challenge-post__username">
-            Challenge |
+            Proyect |
             <span>
               <FaCartShopping className="challenge-post__for"/>
             </span>
@@ -94,7 +94,7 @@ export default function ChallengePost({
         <div className="challenge-post__my-price">
           <p className="challenge-post__pricing-label">Price</p>
           <p className="challenge-post__pricing-amount">
-            $ {price.toFixed(2)} <span>(USD)</span>
+            $ {price.toFixed(2)} <span>(USDC)</span>
           </p>
         </div>
       </div>

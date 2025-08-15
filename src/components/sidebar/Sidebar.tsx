@@ -49,7 +49,7 @@ const Sidebar: React.FC = () => {
           >
             <div className="sidebar__tooltip-container">
               <span className="sidebar__icon"><FaCartShopping /></span>
-              <span className="sidebar__tooltip">Available Challenges</span>
+              <span className="sidebar__tooltip">Aproved Challenges</span>
             </div>
           </Link>
 
@@ -79,9 +79,9 @@ const Sidebar: React.FC = () => {
 
           {/* Explore */}
           <Link
-            to="/content"
-            onClick={() => dispatch(setSidebar("content"))}
-            className={sidebarOption === "content" ? "sidebar__menu-item-active" : "sidebar__menu-item"}
+            to="/members"
+            onClick={() => dispatch(setSidebar("members"))}
+            className={sidebarOption === "members" ? "sidebar__menu-item-active" : "sidebar__menu-item"}
           >
             <div className="sidebar__tooltip-container">
               <span className="sidebar__icon sidebar__explore-icon"><RiSearch2Line /></span>

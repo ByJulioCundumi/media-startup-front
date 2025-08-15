@@ -27,7 +27,7 @@ import {
   FaUsers,
 } from "react-icons/fa";
 
-//import logo from "../../assets/logo.svg";
+import logo from "../../assets/icons/logo.svg";
 import "./authpopup.scss";
 import countries from "i18n-iso-countries";
 import enLocale from "i18n-iso-countries/langs/en.json";
@@ -268,8 +268,8 @@ export default function AuthPopup() {
           {/* ───── Left branding panel ───── */}
           <div className="auth-page__left">
             <div className="auth-page__branding">
-              <img src={"https://images.rawpixel.com/image_png_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjEwNDktMjIucG5n.png"} alt="ChallengeMarket Logo" className="auth-page__logo" />
-              <h1 className="auth-page__headline">Challenge Market</h1>
+              <img src={logo} alt="ChallengeMarket Logo" className="auth-page__logo" />
+              <h1 className="auth-page__headline">Challenge Clips</h1>
               <p className="auth-page__subtitle">
                 The secure challenge marketplace that rewards creativity & results.
               </p>

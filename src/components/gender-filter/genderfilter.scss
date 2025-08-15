@@ -1,28 +1,20 @@
-.gender-filter {
+.gender-filter__option {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #fff;
   display: flex;
-  gap: 0.3rem;
+  align-items: center;
+  justify-content: center;
+  width: 39px;
+  height: 35px;
+  border: 1px solid transparent;
 
-  &__option {
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    transition: all 0.2s ease;
-    font-size: 14px;
-    font-weight: 500;
-    color: #555;
-    background: #fff;
-
-    &:hover {
-      border-color: #007bff;
-      color: #007bff;
-    }
-
-    &.active {
-      background: #20aaff;
-      color: #fff;
-      border-color: #20aaff;
-      font-weight: 600;
-    }
+  &.active {
+    background: #c4c4c44e;
+    color: #8a8a8a;
+    font-weight: 600;
   }
 }

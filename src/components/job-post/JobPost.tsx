@@ -34,9 +34,8 @@ export default function JobPost({
           <FaMale />
         </p>
         <button className="job-post__header-btn">
-          <TbClock /> <span className="job-post__workers">7D</span>
+          <TbClock /> <span className="job-post__workers">7 Days</span>
         </button>
-        <button className="job-post__header-btn"><span className="job-post__workers">Available</span></button>
         <CiMenuKebab className="job-post__options-icon" />
       </div>
 
@@ -44,7 +43,7 @@ export default function JobPost({
       <div className="job-post__user-header">
         <div className="job-post__user-info">
           <p className="job-post__username">
-            Job
+            Freelance Job
             <span>
               | <MdWorkHistory className="job-post__for"/>
             </span>
@@ -92,7 +91,7 @@ export default function JobPost({
         <div className="job-post__my-price">
           <p className="job-post__pricing-label">Bounty</p>
           <p className="job-post__pricing-amount">
-            $ {(price*0.7).toFixed(2)} <span>(USD)</span>
+            $ {(price*0.7).toFixed(2)} <span>(USDC)</span>
           </p>
         </div>
       </div>
