@@ -1,0 +1,253 @@
+.dinamic-post {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  font-family: sans-serif;
+  cursor: pointer;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .dinamic-post__user-info {
+      flex-grow: 1;
+
+      strong {
+        display: block;
+        font-size: 14px;
+      }
+
+      span {
+        font-size: 12px;
+        color: #666;
+      }
+    }
+  }
+
+  &__menu-wrapper {
+    position: relative;
+
+    .dinamic-post__menu-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #606060;
+      font-size: 18px;
+      padding: 4px;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: #e0e0e0;
+        color: #000;
+      }
+    }
+
+    .dinamic-post__menu {
+      position: absolute;
+      right: 0;
+      top: 28px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      list-style: none;
+      padding: 8px 0;
+      margin: 0;
+      min-width: 120px;
+      z-index: 10;
+
+      li {
+        button {
+          width: 100%;
+          background: none;
+          border: none;
+          padding: 8px 16px;
+          text-align: left;
+          font-size: 14px;
+          cursor: pointer;
+          color: #333;
+
+          &:hover {
+            background-color: #f0f0f0;
+          }
+        }
+      }
+    }
+  }
+
+  &__content {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #222;
+  }
+
+  &__image {
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      max-width: 97%;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+      object-fit: contain;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    gap: 16px;
+    margin-top: 10px;
+
+    button {
+      background: none;
+      border: none;
+      color: #606060;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      padding: 4px 6px;
+      border-radius: 4px;
+      transition: color 0.2s ease, background-color 0.2s ease;
+
+      &:hover {
+        color: #000;
+        background-color: #f0f0f0;
+      }
+    }
+  }
+
+  // Estilos específicos para encuesta (type === 'text-poll')
+  &__question {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  &__votes {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  &__option {
+    position: relative;
+    border-radius: 6px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background 0.2s ease;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.342);
+
+    &.voted {
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.047);
+    }
+
+    &.selected {
+      border: 2px solid #3ea5ff7a;
+    }
+
+    .dinamic-post__icon {
+      z-index: 2;
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    &.selected .dinamic-post__bar {
+      background-color: #cce4ff;
+    }
+
+    .dinamic-post__label {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 12px;
+      width: 100%;
+      font-size: 14px;
+    }
+
+    .dinamic-post__text {
+      text-align: left;
+    }
+
+    .dinamic-post__percentage {
+      font-weight: 500;
+    }
+  }
+
+  &__bar-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+
+    .dinamic-post__bar {
+      background-color: white; // Color blanco antes de votar
+      height: 100%;
+      width: 0%;
+      transition: width 0.3s ease, background-color 0.3s ease;
+    }
+
+    // Cuando se ha votado, se anima la barra con el color y ancho correcto
+    .voted & .dinamic-post__bar {
+      background-color: #ededed;
+      width: var(--bar-width, 0%);
+    }
+
+    // Si la opción está seleccionada, se usa un azul más claro
+    .selected.voted & .dinamic-post__bar {
+      background-color: #cce4ff;
+    }
+  }
+
+  &__tag {
+    display: inline-block;
+    background: #00aaff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    margin-right: 0.4rem;
+    color: white;
+  }
+}
+
+.dinamic-post--opened {
+  width: 100%;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  margin: 0;
+}

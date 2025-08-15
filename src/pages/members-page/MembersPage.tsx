@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router-dom'
-import ChallengesNavbar from '../../components/sub-navbar/SubNavbar'
+import SubNavbar from '../../components/sub-navbar/SubNavbar'
 
 function MembersPage() {
   return (
     <section>
-        <ChallengesNavbar />
+        <SubNavbar />
         <Outlet />
     </section>
   )

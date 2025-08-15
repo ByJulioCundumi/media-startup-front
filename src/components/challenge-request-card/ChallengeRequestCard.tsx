@@ -107,7 +107,7 @@ export default function ChallengeRequestCard({
         </div>
       ) : (
         <div className="challenge-request__viewer-note">
-          <p><GoAlert /> Esta solicitud está pendiente de revisión.</p>
+          <p><GoAlert /> - Esta solicitud está pendiente de revisión.</p>
         </div>
       )}
     </div>

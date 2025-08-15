@@ -2,7 +2,7 @@ import "./membersposts.scss"
 
 function MembersPosts() {
   return (
-    <div>MembersPosts</div>
+    <div className="members-content">MembersPosts</div>
   )
 }
 

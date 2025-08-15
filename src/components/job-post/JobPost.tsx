@@ -30,12 +30,10 @@ export default function JobPost({
     <div className="job-post">
       {/* Header */}
       <div className="job-post__header-actions">
+          <span className="job-post__workers">(7) Days To Deliver</span>
         <p className="job-post__gender-icon">
           <FaMale />
         </p>
-        <button className="job-post__header-btn">
-          <TbClock /> <span className="job-post__workers">7 Days</span>
-        </button>
         <CiMenuKebab className="job-post__options-icon" />
       </div>
 
@@ -48,7 +46,7 @@ export default function JobPost({
               | <MdWorkHistory className="job-post__for"/>
             </span>
           </p>
-          <p className="job-post__handle">@Male</p>
+          <p className="job-post__handle">@ClipChallengers</p>
         </div>
       </div>
 

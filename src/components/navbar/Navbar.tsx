@@ -31,7 +31,7 @@ function Navbar() {
         <div className="navbar__brand">
             <SiYoutubeshorts className="navbar__brand--icon"/>
             <h1 className="navbar__brand--title">
-              <span className="navbar__brand--title-blue">Clip</span>Challengers
+              <span className="navbar__brand--title-blue">Big</span>Challengers
             </h1>
         </div>
         

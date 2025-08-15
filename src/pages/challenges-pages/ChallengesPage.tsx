@@ -1,13 +1,13 @@
 import { Outlet } from 'react-router-dom'
 import "./challengespage.scss"
-import ChallengesNavbar from '../../components/sub-navbar/SubNavbar'
 import Cta from '../../components/cta/Cta'
+import SubNavbar from '../../components/sub-navbar/SubNavbar'
 
 function ChallengesPage() {
   return (
     <section className="challenges-page">
       <Cta/>
-      <ChallengesNavbar/>
+      <SubNavbar/>
       <Outlet/>
     </section>
   )

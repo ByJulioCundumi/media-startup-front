@@ -59,6 +59,13 @@
 
   &__workers{
     font-size: 0.68rem;
+    margin-right: 0.2rem;
+    color: rgb(103, 102, 102);
+
+    &--icon{
+      color: rgb(103, 102, 102);
+      margin-right: -0.1rem;
+    }
   }
 
   &__avatar {
@@ -97,7 +104,7 @@
   }
 
   &__handle {
-    font-size: 0.85rem;
+    font-size: 0.75rem;
     margin-top: 0.3rem;
     color: #8b8c8e;
     margin-bottom: -0.2rem;

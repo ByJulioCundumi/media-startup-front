@@ -73,7 +73,7 @@ const Sidebar: React.FC = () => {
           >
             <div className="sidebar__tooltip-container">
               <span className="sidebar__icon"><MdWorkHistory className='jobs-pulse'/></span>
-              <span className="sidebar__tooltip">Jobs | Content Creators</span>
+              <span className="sidebar__tooltip">Jobs | Freelance Creators</span>
             </div>
           </Link>
 

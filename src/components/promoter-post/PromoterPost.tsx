@@ -31,13 +31,13 @@ export default function PromoterPost({
     <div className="promoter-post">
       {/* Header */}
       <div className="promoter-post__header-actions">
+        <p className="promoter-post__views">  <FiEye className="promoter-post__views--icon"/> 214</p>
         <p className="promoter-post__gender-icon">
           <FaMale />
         </p>
         <button className="promoter-post__header-btn">
           <TbClock />
         </button>
-        <button className="promoter-post__header-btn"><span className="promoter-post__views">(214)</span> <FiEye /></button>
         <CiMenuKebab className="promoter-post__options-icon" />
       </div>
 
@@ -50,7 +50,7 @@ export default function PromoterPost({
               | <ImBullhorn className="promoter-post__for"/>
             </span>
           </p>
-          <p className="promoter-post__handle">@Male</p>
+          <p className="promoter-post__handle">@ClipChallengers</p>
         </div>
       </div>
 
