@@ -12,27 +12,7 @@ import { useNavigate } from 'react-router-dom';
 import { setPostSelectedStatus } from '../../reducers/popupStatusSlice';
 import './dinamicpost.scss';
 import type { IState } from '../../interfaces/IState';
-
-interface User {
-  name: string;
-  username: string;
-  avatarUrl: string;
-  timeAgo: string;
-}
-
-interface PollOption {
-  text: string;
-  votes: number;
-}
-
-interface DinamicPostProps {
-  type: 'text' | 'text-image' | 'text-poll';
-  user: User;
-  content: string;
-  imageUrl?: string;
-  pollQuestion?: string;
-  pollOptions?: PollOption[];
-}
+import type { DinamicPostProps, PollOption } from '../../util/postsMock';
 
 export default function DinamicPost({
   type,
@@ -60,14 +40,7 @@ const { exploreExpandedProfile } = useSelector((state: IState) => state.popupSta
   };
 
   const selectPost = () => {
-    setMenuOpen(false);
-    dispatch(setPostSelectedStatus('opened'));
-    
-    if(exploreExpandedProfile === "closed" && sidebarOption === "explore"){
-      navigate('/explore/posts/431');
-    } else if(exploreExpandedProfile === "opened"){
-      navigate('/explore/user/juanito_perez312/posts/431');
-    }
+
   };
 
   const handleVote = (index: number) => {

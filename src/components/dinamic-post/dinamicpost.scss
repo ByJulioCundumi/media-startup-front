@@ -4,10 +4,11 @@
   padding: 1.5rem 2rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.08);
   width: 100%;
-  max-width: 900px;
+  max-width: 680px;
   margin: 20px auto;
   font-family: sans-serif;
   cursor: pointer;
+  height: fit-content;
 
   &__header {
     display: flex;
@@ -101,11 +102,11 @@
 
     img {
       width: 100%;
-      max-width: 97%;
+      max-width: 95%;
       border-radius: 8px;
       display: block;
       margin: 0 auto;
-      object-fit: contain;
+      object-fit: fill;
     }
   }
 

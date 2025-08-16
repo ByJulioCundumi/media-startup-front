@@ -46,7 +46,7 @@ export default function ChallengePost({
       <div className="challenge-post__user-header">
         <div className="challenge-post__user-info">
           <p className="challenge-post__username">
-            Aproved |
+            Project |
             <span>
               <FaCartShopping className="challenge-post__for"/>
             </span>
